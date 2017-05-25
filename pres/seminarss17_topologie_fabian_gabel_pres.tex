@@ -1,0 +1,180 @@
+%Bin kein Freund serifenloser Schriftarten. . . es geht aber sicher noch etwas schöner
+\documentclass[serif,9pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathtools}
+\usepackage[ngerman]{babel}
+
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{quotes,babel,angles}
+
+\usepackage{lmodern}
+\usepackage{anyfontsize}
+
+\setbeamertemplate{theorems}[numbered]
+
+\input{title}
+
+\input{befehle}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Das (sportliche) Programm -- Etappen(ziele)}
+  \tableofcontents
+\end{frame}
+
+\AtBeginSection[]
+{
+  \begin{frame}{Inhalt}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\section{Kategorientheorie Grundlagen (Teil II)}
+
+\subsection{Funktoren allgemein}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Vokabelheft}
+  Objekte verhalten sich zu Morphismen wie
+  Kategorien zu ???
+  \pause
+  \begin{defn*}
+  Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
+  Dann nennen $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls folgende Bedingungen erfüllt sind:
+  \begin{enumerate}[F1)]
+    \item $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(A), \F(B)]_\De$.
+    \item $\F(f \circ g) = \F(f) \circ \F(g)$, falls $f \circ g$ definiert ist.
+    \item $\F(1_A) = 1_{\F(A)}$ für alle $A \in |\C|$.
+  \end{enumerate}
+  Abkürzend: $\F \colon \C \to \De$. (\emph{Homomorphismus von Funktoren})
+
+  \pause
+
+  \emph{Kontravarianter Funktor}, falls modifiziert:
+\begin{enumerate}[F1')]
+  \item[F2')] $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(B), \F(A)]_\De$.
+  \item[F3')] $\F(f \circ g) = \F(g) \circ \F(f)$, falls $f \circ g$ existiert.
+\end{enumerate}
+  \end{defn*}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Beispiele}
+  \begin{enumerate}[a)]
+      \item<+-> Konstanter Funktor:
+      $\C,\De$ Kategorien, $X \in |\De|$.
+
+        $\forall A \in |\C|$ und $\forall f \in \Mor_\C$ durch $\F(A) \coloneqq X$ und $\F(f) \coloneqq 1_X$ 
+        
+        (kovariant und contravariant).
+      \item<+-> Vergissfunktor: $\C$ ein (topologisches) Konstrukt: 
+        
+        $\F \to \Set$ definiert durch $\F((X, \xi)) = X$ und $\F(f) = f$.
+      \item<+-> Dualisierender Funktor: 
+        
+        $\F \colon \C \to \C^*$ definiert durch $\F(X) = X$ und $F(f) = f^*$ (contravariant).
+      \item<+-> Dualer Funktor: $\F \colon \C \to \De$ ein Funktor: 
+        
+        $\F^* \coloneqq \Delta_{\De} \circ F \circ \Delta_{\C^*}$
+        
+      \item<+-> Identitätsfunktor $\I_\C$: 
+        
+        $\F \colon \C \to \C$ definiert durch $\F(X) = X$ und $\F(f) = f$.
+
+      \item<+-> Inklusionsfunktor: 
+        
+        Sei $\C$ eine Kategorie und $\A$ eine \emph{Unterkategorie}, dh 
+        \begin{enumerate}[1.]
+          \item $|\A| \subset |\C|$,
+          \item $[A, B]_\A \subset [A,B]_\C$ für alle $(A, B) \in |\A| \times |\A|$,
+          \item Komposition von Mor. in $\A$ wie in $\C$; Identitätsmorphismus derselbe.
+        \end{enumerate}
+        Gilt sogar $[A, B]_\A = [A, B]_\C$: \emph{volle} Unterkategorie.
+
+        $\F_e \coloneqq \I_\C |_\A$
+    \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Definition -- Universelle Abbildung}
+  $\A$ und $\B$ Kategorien, $\F \colon \A \to \B$ Funktor und $B \in |\B|$.
+
+  Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls $\forall A' \in |\A|$ und $\forall f \colon B \to \F(A')$ genau ein $\A$-Morphismus $\overline f \colon A \to A'$ existiert so dass das Diagramm
+  $$
+  \begin{tikzcd}
+    B \arrow[rd,"u"] \arrow[rr, "f"] &&\F(A') \\
+    &\F(A) \arrow[ru, "\F(\overline{f})"]
+  \end{tikzcd}
+  $$
+  kommutiert.
+  \pause
+
+  Entsprechend: Paar $(A,u)$ mit $A \in |\A|$ und $u \colon \F(A) \to B$: 
+  \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls $(u^*, A)$ eine universelle Abbildung für $B$ bezüglich des Funktors $\F^* \colon \A^* \to \B^*$ ist:
+  $$
+  \begin{tikzcd}[row sep=2.5em]
+    B  &&  \arrow[ll, "f"] \F(A')\arrow[ld, "\F(\overline{f})"]  \\
+    & \arrow[lu,"u"]\F(A) & 
+  \end{tikzcd}
+  $$
+  kommutiert.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Das Prinzip bei der Arbeit}
+  $$
+  \begin{tikzcd}
+    B \arrow[rd,"u"] \arrow[rr, "f"] &&\F(A') \\
+    &\F(A) \arrow[ru, "\F(\overline{f})"]
+  \end{tikzcd}
+  $$
+  Schonmal gesehen bei der Stone-\v{C}ech-Kompaktifizierung?
+  \vspace{1em}
+
+  $\F = \F_e \colon \CompHaus \to \Tych$.
+
+  Für alle $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung:
+
+  $Y \in \CompHaus$ und $f \in [X, \F_e(Y)]_{\Tych}$, liefert Satz von Stone-\v{C}ech gerade:
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        X \arrow[rd,"e_X"] \arrow[rr, "f"] &&\F_e(Y) = Y \\
+        &\F_e(\beta(X)) = \beta(X) \arrow[ru, "\F_e(\overline{f})"]
+      \end{tikzcd}
+      $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Weitere Beispiele}
+  \begin{itemize}
+    \item T0-ifizierung
+    \item Vergissfunktor
+  \end{itemize}
+\end{frame}
+
+\subsection{Adjungierte Funktoren}
+
+\section{Reflektive und coreflektive Unterkategorien}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Allgemein}
+\subsection{In topologischen Konstrukten}
+
+\section{Konvergenzstrukturen und uniforme Konvergenzstrukturen}
+
+\subsection{Konvergenzstrukturen}
+\subsection{Uniforme Konvergenzstrukturen}
+\subsection{Bindeglied zwischen beiden Strukturen}
+
+\end{document}

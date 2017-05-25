@@ -1,0 +1,50 @@
+% Vorlage fuer Abschlussarbeiten am Fachbereich Mathematik der TU Darmstadt.
+% Geeignet fuer Bachelorarbeiten, Masterarbeiten und Diplomarbeiten.
+
+%\documentclass[12pt,a4paper,twoside]{report}
+\documentclass[12pt,a4paper,leqno]{article}
+\usepackage[paper=a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{enumerate}
+\usepackage{amsmath, amssymb, amsthm, dsfont}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{quotes,babel,angles}
+%\usepackage{hyperref}
+\usepackage[pdfauthor={Fabian Gabel},%
+pdftitle={Topologie-Seminar - Reflektionen \& Coreflektionen},%
+%pagebackref=true,%
+%pdftex
+]{hyperref}
+\usepackage{lmodern}
+
+\parindent 0pt
+
+\linespread{1.2}
+
+% Inhaltsverzeichnis erstellen.
+
+\input{befehle}
+
+\begin{document}
+
+\pagestyle{empty}
+\include{titel}
+
+\tableofcontents
+
+%\pagestyle{headings}
+
+\input{intro}
+\input{chap1}
+\input{chap2}
+\input{chap3}
+
+\bibliographystyle{alpha}
+\bibliography{seminar17_fabian_gabel}
+      
+\end{document}

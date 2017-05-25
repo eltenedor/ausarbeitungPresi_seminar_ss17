@@ -1,0 +1,129 @@
+% Makros
+\numberwithin{equation}{section}
+
+%Zahlkörper
+\newcommand{\N}{\mathbb{N}} 
+\newcommand{\Z}{\mathbb{Z}} 
+\newcommand{\Q}{\mathbb{Q}} 
+\newcommand{\R}{\mathcal{R}}
+\newcommand{\C}{\mathcal{C}}
+
+%Funktionenräume
+\newcommand{\CC}{\mathrm{C}} 
+\newcommand{\De}{\mathcal{D}} 
+\newcommand{\Ell}{\mathrm{L}} 
+\newcommand{\Li}{\mathfrak{L}}
+\newcommand{\BB}{\mathrm{B}}
+\newcommand{\DD}{\mathrm{D}}
+
+%Mengen
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\Sc}{\mathcal{S}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\FF}{\mathrm{F}}
+\newcommand{\FU}{\mathrm{F}_0}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\U}{\mathcal{U}}
+\newcommand{\Ha}{\mathcal{H}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\I}{\mathcal{I}}
+\newcommand{\Pot}{\mathcal{P}}
+
+%Kategorien
+\newcommand{\FilDSUConv}{\mathbf{Fil\textbf{-}D\textbf{-}SUConv}}
+\newcommand{\Sy}{\mathrm{S}}
+\newcommand{\Tych}{\mathbf{Tych}}
+\newcommand{\CompHaus}{\mathbf{CompHaus}}
+\newcommand{\Set}{\mathrm{Set}}
+\newcommand{\Unif}{\mathbf{Unif}}
+\newcommand{\CFil}{\mathbf{CFil}}
+\newcommand{\Fil}{\mathbf{Fil}}
+\newcommand{\Conv}{\mathbf{Conv}}
+\newcommand{\GConv}{\mathbf{GConv}}
+\newcommand{\KConv}{\mathbf{KConv}}
+\newcommand{\Lim}{\mathbf{Lim}}
+\newcommand{\PrTop}{\mathbf{PrTop}}
+\newcommand{\PrULim}{\mathbf{PrULim}}
+\newcommand{\PsTop}{\mathbf{PsTop}}
+\newcommand{\SUConv}{\mathbf{SUConv}}
+\newcommand{\SULim}{\mathbf{SULim}}
+\newcommand{\TPrTop}{\mathbf{TPrTop}}
+\newcommand{\Top}{\mathbf{Top}}
+\newcommand{\ULim}{\mathbf{ULim}}
+\newcommand{\Mor}{\mathrm{Mor}}
+
+%Sonstige
+\newcommand{\co}{\mathrm{co}} % compact open
+\newcommand{\ee}{\mathrm{e}} % compact open
+\newcommand{\W}{\mathcal{W}} % Weyl-Gruppe
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\St}{\mathfrak{S}}
+\newcommand{\1}{\mathbf{1}}
+
+
+\def\esssup{\qopname\relax m{\mathrm{ess}\,sup}}
+
+
+% Umgebungen für Definitionen, Sätze, usw.
+
+%\newtheorem{defn}{Definition}[section]
+%\newtheorem{ex}{Beispiel}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{thm}{Satz}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{kor}[thm]{Korollar}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ntion}{Notation}
+\newtheorem*{thm*}{Satz}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{ex}[thm]{Beispiel}
+\newtheorem*{ex*}{Beispiel}
+\newtheorem*{defn*}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{bem}{Bemerkung}
+
+\def\Satzrefname{Satz}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\loc}{loc}
+\DeclareMathOperator{\pv}{pv}
+\DeclareMathOperator{\konv}{konv}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Spur}{Spur}
+\DeclareMathOperator{\BUC}{BUC}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\abs}{abs}
+\DeclareMathOperator{\Op}{Op}
+\DeclareMathOperator{\Aff}{Aff}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\cstar}{C*}
+\DeclareMathOperator{\stoplim}{stop-lim}
+\DeclareMathOperator{\swoplim}{swop-lim}
+
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\mathrm{div\,} #1} % for divergence
+\renewcommand{\d}[1]{\ensuremath\, {\operatorname{d}\!{#1}}}
+\newcommand{\norm}[1]{\lVert #1 \rVert}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\def\Xint#1{\mathchoice
+{\XXint\displaystyle\textstyle{#1}}%
+{\XXint\textstyle\scriptstyle{#1}}%
+{\XXint\scriptstyle\scriptscriptstyle{#1}}%
+{\XXint\scriptscriptstyle\scriptscriptstyle{#1}}%
+\!\int}
+\def\XXint#1#2#3{{\setbox0=\hbox{$#1{#2#3}{\int}$ }
+\vcenter{\hbox{$#2#3$ }}\kern-.6\wd0}}
+\def\ddashint{\Xint=}
+\def\dashint{\Xint-}
