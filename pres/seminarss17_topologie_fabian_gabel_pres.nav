@@ -15,25 +15,31 @@
 \headcommand {\beamer@framepages {7}{12}}
 \headcommand {\slideentry {1}{1}{3}{13/14}{Funktoren allgemein}{0}}
 \headcommand {\beamer@framepages {13}{14}}
-\headcommand {\slideentry {1}{1}{4}{15/15}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {1}{1}{5}{16/16}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{17}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{16}}
-\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{17}{Reflektive und coreflektive Unterkategorien}{0}}
-\headcommand {\beamer@sectionpages {3}{16}}
-\headcommand {\beamer@subsectionpages {17}{16}}
-\headcommand {\slideentry {2}{0}{1}{17/17}{}{0}}
+\headcommand {\slideentry {1}{1}{4}{15/16}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {15}{16}}
+\headcommand {\slideentry {1}{1}{5}{17/17}{Funktoren allgemein}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{18}{Allgemein}}\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{18}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {18}{17}}
-\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{18}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@subsectionpages {18}{17}}
-\headcommand {\slideentry {3}{0}{1}{18/18}{}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\beamer@partpages {1}{18}}
-\headcommand {\beamer@subsectionpages {19}{18}}
-\headcommand {\beamer@sectionpages {18}{18}}
-\headcommand {\beamer@documentpages {18}}
-\headcommand {\def \inserttotalframenumber {10}}
+\headcommand {\slideentry {1}{1}{6}{18/20}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{21}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{20}}
+\headcommand {\slideentry {1}{2}{1}{21/24}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {21}{24}}
+\headcommand {\slideentry {1}{2}{2}{25/25}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{26}{Reflektive und coreflektive Unterkategorien}{0}}
+\headcommand {\beamer@sectionpages {3}{25}}
+\headcommand {\beamer@subsectionpages {21}{25}}
+\headcommand {\slideentry {2}{0}{1}{26/26}{}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{27}{Allgemein}}\headcommand {\beamer@subsectionpages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{27}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {27}{26}}
+\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{27}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@sectionpages {26}{26}}
+\headcommand {\beamer@subsectionpages {27}{26}}
+\headcommand {\slideentry {3}{0}{1}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@partpages {1}{27}}
+\headcommand {\beamer@subsectionpages {28}{27}}
+\headcommand {\beamer@sectionpages {27}{27}}
+\headcommand {\beamer@documentpages {27}}
+\headcommand {\def \inserttotalframenumber {13}}

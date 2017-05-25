@@ -138,6 +138,7 @@
   $$
   Schonmal gesehen bei der Stone-\v{C}ech-Kompaktifizierung?
   \vspace{1em}
+  \pause
 
   $\F = \F_e \colon \CompHaus \to \Tych$.
 
@@ -161,11 +162,82 @@
   \end{itemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Die \emph{richtigen} Abbildungen zwischen Funktoren}
+  Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
+  \begin{enumerate}[1)]
+    \item<+-> Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"] & \G(A)\arrow[d,"\G(f)"] \\
+        \F(B)\arrow[r,"\eta_B"] & \G(B)
+      \end{tikzcd}
+      $$
+      kommutiert. Kurz: $\eta \colon \F \to \G$ (Mor. von Funktoren).
+    \item<+-> Eine natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls für alle $A \in |\C|$ der Morphismus $\eta_A$ ein Isomorphismus ist.
+    \item<+-> $\F$ und $\G$ heißen \emph{natürlich äquivalent},  wenn eine natürliche Äquivalenz $\eta \colon \F \to \G$ existiert. Kurz: $\F \approx \G$.
+  \end{enumerate}
+\end{frame}
+
 \subsection{Adjungierte Funktoren}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Adjungierter Funktor}
+
+\pause
+  \begin{defn*}
+  Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und $u = (u_B) \colon \I_\B \to \F \circ \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ natürliche Transformationen mit den Eigenschaften
+  \begin{enumerate}[(1)]
+    \item $\F(v_A) \circ u_{\F(A)} = \1_{\F(A)}$ für alle $A \in |\A|$ und
+    \item $v_{\G(B)} \circ \G(u_B) = \1_{\G(B)}$ für alle $B \in |\B|$,
+  \end{enumerate}
+  so nennen wir $\G$ den \emph{zu $\F$ linksadjungierten Funktor} und analog nennen wir $\F$ den \emph{zu $\G$ rechtsadjungierten Funktor}.
+  Das Paar $(\G, \F)$ nennen wir ein \emph{Paar adjungierter Funktoren}.
+\end{defn*}
+
+\pause
+
+  \begin{thm*}
+    Ein Funktor $\F \colon \A \to \B$ besitzt einen linksadjungierten Funktor $\G \colon \B \to \A$ genau dann, wenn für jedes $B \in |\B|$ eine bezüglich $\F$ universelle Abbildung existiert.
+  \end{thm*}
+
+\pause
+
+  \begin{bem}
+    Die universelle Abbildung aus dem Satz ist gerade die natürliche Tranformation aus der Definition.
+  \end{bem}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Adjungierte Situation}
+
+  \begin{itemize}
+    \item Adjungiere Funktoren sind bis auf natürliche Äquivalenz eindeutig
+    \item Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz
+    \item Adjungierte Situation: Quadrupel $(\G, \F, u, v)$. 
+  \end{itemize}
+
+  \begin{ex*}
+     Wieder Stone-\v{C}ech-Kompaktifizierung:
+
+     $\F = \F_e \colon \CompHaus \to \Tych$.
+
+     \underline{Für alle} $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung bezüglich $\F_e$
+     
+     Also: Existiert eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$.
+     \vspace{1em}
+
+     Wir haben (nichts-ahnend) einen Funktor konstruiert!
+  \end{ex*}
+
+\end{frame}
+
 
 \section{Reflektive und coreflektive Unterkategorien}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsection{Allgemein}

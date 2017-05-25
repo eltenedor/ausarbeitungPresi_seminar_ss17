@@ -1,5 +1,14 @@
-\frametitle{Weitere Beispiele}
-  \begin{itemize}
-    \item T0-ifizierung
-    \item Vergissfunktor
-  \end{itemize}
+\frametitle{Die \emph{richtigen} Abbildungen zwischen Funktoren}
+  Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
+  \begin{enumerate}[1)]
+    \item<+-> Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"] & \G(A)\arrow[d,"\G(f)"] \\
+        \F(B)\arrow[r,"\eta_B"] & \G(B)
+      \end{tikzcd}
+      $$
+      kommutiert. Kurz: $\eta \colon \F \to \G$ (Mor. von Funktoren).
+    \item<+-> Eine natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls für alle $A \in |\C|$ der Morphismus $\eta_A$ ein Isomorphismus ist.
+    \item<+-> $\F$ und $\G$ heißen \emph{natürlich äquivalent},  wenn eine natürliche Äquivalenz $\eta \colon \F \to \G$ existiert. Kurz: $\F \approx \G$.
+  \end{enumerate}

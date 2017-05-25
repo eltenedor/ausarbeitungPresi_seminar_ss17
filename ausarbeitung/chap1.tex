@@ -28,6 +28,7 @@ Ein \emph{contravarianter Funktor} $\F \colon \C \to \De$ ist gerate ein covaria
 Wir beleben den Begriff des Funktors nun, indem wir bekannte Sachverhalte kategorientheoretisch unter die Lupe nehmen.
 
 \begin{ex}
+  \ref{ex:Example}
 \begin{enumerate}[a)]
     \item Konstanter Funktor: Sind $\C$ und $\De$ Kategorien und $X \in |\De|$.
       So lässt sich für alle $A \in |\C|$ und alle $f \in \Mor_\C$ durch $\F(A) = X$ und $\F(f) = 1_X$ ein Funktor definieren, welcher sowohl covariant als auch contravariant ist.
@@ -131,13 +132,41 @@ Widmen wir unsere Aufmerksamkeit nun ein paar famosen Beispielen, um die eigefü
   \end{enumerate}
 \end{ex}
 
-\begin{defn}[Natürliche Transformationen/Morphismen von Funktoren]
-  
+Funktoren für sich alleine sind ja schon interessante Kreaturen, aber wie lassen sich Beziehungen unterschiedlicher Funktoren zueinander beschreiben?
+
+\begin{defn}[Natürliche Transformationen]
+  Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
+  \begin{enumerate}[1)]
+    \item Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"] & \G(A)\arrow[d,"\G(f)"] \\
+        \F(B)\arrow[r,"\eta_B"] & \G(B)
+      \end{tikzcd}
+      $$
+      kommutiert. Ist $\eta$ eine natürliche Transformation, schreiben wir im Folgenden auch kurz $\eta \colon \F \to \G$.
+    \item Eine natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls für alle $A \in |\C|$ der Morphismus $\eta_A$ ein Isomorphismus ist.
+    \item $\F$ und $\G$ heißen \emph{natürlich äquivalent}, oder kurz $\F \approx \G$, wenn eine natürliche Äquivalenz $\eta \colon \F \to \G$ existiert.
+  \end{enumerate}
 \end{defn}
 
 \subsection{Adjungierte Funktoren}
 
-Morphismen zwischen Identitätsfunktor und einer Verkettung von Funktoren
+Ein Funktor $\F \colon \C \to \De$ ist natürlich nicht immer ein Isomorphismus, d.h. es existiert nicht unbedingt ein Funktor $\G \colon \De \to \De$ mit
+$$
+\F \circ \G = \I_\De \quad\text{und}\quad \G \circ \F = \I_\C.
+$$
+
+Sind Funkoren nicht invertierbar, können sie zumindest \emph{fast} invertierbar mittels einer Pseudoinversen $\G \colon \De \to \C$ sein.
+Dies ist ein Funktor mit 
+$$\F \circ \G \approx \I_\De \quad\text{und}\quad \G \circ \F \approx \I_\C.$$
+
+Auch das ist nicht immer der Fall und folglich ist man bestrebt zu untersuchen, ob ein Funktor nicht zumindest fast \emph{fast} invertierbar ist, im Sinne dass ein weiterer Funktor $\G \colon \De \to \C$ existiert, sodass zumindest natürliche Transformationen
+$$
+\eta \colon \F \circ \G \to \I_\De \quad\text{und}\quad \xi \colon \G \circ \F \to \I_\C
+$$
+zur Stelle sind.
+Um ebendiese Funktoren dreht es sich in diesem Unterabschnitt.
 
 \begin{thm}[\cite{preuss}, 2.1.12]
   Sei $\F \colon \A \to B$ ein Funktor mit der Eigenschaft, dass für alle $B \in |\B|$ eine universelle Abbildung $(u_B, A_B)$ bezüglich $F$ existiert.
@@ -157,7 +186,7 @@ Morphismen zwischen Identitätsfunktor und einer Verkettung von Funktoren
 \end{kor}
 
 \begin{defn}[Linksadjungierter Funktor]
-  Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und $u = (u_B) \colon \I_\B \to \F \colon \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ natürliche Transformationen mit den Eigenschaften
+  Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und $u = (u_B) \colon \I_\B \to \F \circ \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ natürliche Transformationen mit den Eigenschaften
   \begin{enumerate}[(1)]
     \item $\F(v_A) \circ u_{\F(A)} = \1_{\F(A)}$ für alle $A \in |\A|$ und
     \item $v_{\G(B)} \circ \G(u_B) = \1_{\G(B)}$ für alle $B \in |\B|$,
@@ -177,7 +206,7 @@ Morphismen zwischen Identitätsfunktor und einer Verkettung von Funktoren
 \begin{ex}
   \begin{itemize}
     \item T0-ifizierung
-    \item Stone-Cech
+    \item Stone-\v{C}ech Kompaktifizierung: Der Inklusionsfunktor $\F_e$ aus Beispiel \ref{ex:Example} besitzt also eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$, die jedem Tychonoff-Raum $X$ seine Stone-\v{C}ech-Kompaktifizierung zuordnet. Beim Versuch, Tychonoff-Räume zu kompaktifizieren wurde also implizit ein ganzer Funktor mitkonstruiert.
     \item Vergissfunktor
   \end{itemize}
 \end{ex}
