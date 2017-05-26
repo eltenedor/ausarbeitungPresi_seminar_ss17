@@ -238,9 +238,46 @@
 
 \section{Reflektive und coreflektive Unterkategorien}
 
-
-
 \subsection{Allgemein}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Definition -- Reflektive Unterkategorie}
+  $A$ Unterkategorie einer Kategorie $\C$.
+  
+  $\F_e \colon \A \to \C$ der Inklusionsfunktor.
+
+  Dann nennen wir $\A$ \emph{reflektiv} in $\C$ genau dann, wenn eine der folgenden äquivalenten Bedingungen erfüllt ist:
+  \begin{enumerate}[(1)]
+    \item $\F_e$ besitzt den Linksadjungierten Funktor $\R$.
+    \item Jedes $X \in |C|$ besitzt eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
+  \end{enumerate}
+
+  \pause
+  \vspace{1em}
+  Funktor $\R$ nennen wir \emph{Reflektor}
+  
+  Die Morphismen $r_X \colon X \to X_\A$ nennen wir Reflektionen von $X$ bezüglich $\A$.
+
+  \pause
+  \vspace{1em}
+  Durch Dualisierung erhalten wir einen weiteren Begriff:
+
+  Wir nennen $\A$ \emph{coreflektiv} in $\C$, genau dann, wenn $\A^*$ reflektiv ist in $\C^*$. 
+
+  \pause
+  \vspace{1em}
+
+  Wir nennen $\A$ \emph{epireflektiv/ extremal epireflektiv/ bireflektiv in} $\C$, falls 
+  \pause
+  \begin{itemize}
+    \item  $\A$ reflektiv in $\C$
+    \item  $r_X \colon X \to X_\A$ ist ein Epimorphismus/ extremaler Epimorphismus / Bimorphismus ist.
+  \end{itemize}
+   
+  Die Morphismen $r_X$ nennen wir \emph{Epireflektionen/ extremale Epireflektionen/ Bireflektionen}.
+\end{frame}
+
 \subsection{In topologischen Konstrukten}
 
 \section{Konvergenzstrukturen und uniforme Konvergenzstrukturen}

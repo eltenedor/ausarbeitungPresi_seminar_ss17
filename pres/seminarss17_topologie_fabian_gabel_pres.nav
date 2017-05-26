@@ -32,14 +32,16 @@
 \headcommand {\slideentry {2}{0}{1}{26/26}{}{0}}
 \headcommand {\beamer@framepages {26}{26}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{27}{Allgemein}}\headcommand {\beamer@subsectionpages {26}{26}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{27}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {27}{26}}
-\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{27}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@sectionpages {26}{26}}
-\headcommand {\beamer@subsectionpages {27}{26}}
-\headcommand {\slideentry {3}{0}{1}{27/27}{}{0}}
-\headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@partpages {1}{27}}
-\headcommand {\beamer@subsectionpages {28}{27}}
-\headcommand {\beamer@sectionpages {27}{27}}
-\headcommand {\beamer@documentpages {27}}
-\headcommand {\def \inserttotalframenumber {13}}
+\headcommand {\slideentry {2}{1}{1}{27/31}{Allgemein}{0}}
+\headcommand {\beamer@framepages {27}{31}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{32}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {27}{31}}
+\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{32}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@sectionpages {26}{31}}
+\headcommand {\beamer@subsectionpages {32}{31}}
+\headcommand {\slideentry {3}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {33}{32}}
+\headcommand {\beamer@sectionpages {32}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\def \inserttotalframenumber {14}}
