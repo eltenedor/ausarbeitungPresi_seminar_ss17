@@ -33,7 +33,7 @@
   \end{frame}
 }
 
-\section{Kategorientheorie Grundlagen (Teil II)}
+\section{Grundlagen der Kategorientheorie (Teil II)}
 
 \subsection{Funktoren allgemein}
 
@@ -41,7 +41,7 @@
 \begin{frame}
   \frametitle{Vokabelheft}
   Objekte verhalten sich zu Morphismen wie
-  Kategorien zu ???
+  Kategorien zu \only<1>{???}\only<2,3>{Funktoren.}
   \pause
   \begin{defn*}
   Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
@@ -200,7 +200,7 @@
 \pause
 
   \begin{thm*}
-    Ein Funktor $\F \colon \A \to \B$ besitzt einen linksadjungierten Funktor $\G \colon \B \to \A$ genau dann, wenn für jedes $B \in |\B|$ eine bezüglich $\F$ universelle Abbildung existiert.
+    Ein Funktor $\F \colon \A \to \B$ besitzt einen linksadjungierten Funktor $\G \colon \B \to \A$ genau dann, wenn für alle $B \in |\B|$ eine bezüglich $\F$ universelle Abbildung existiert.
   \end{thm*}
 
 \pause
@@ -215,20 +215,26 @@
   \frametitle{Adjungierte Situation}
 
   \begin{itemize}
-    \item Adjungiere Funktoren sind bis auf natürliche Äquivalenz eindeutig
-    \item Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz
-    \item Adjungierte Situation: Quadrupel $(\G, \F, u, v)$. 
+    \item<+-> Adjungierte Funktoren sind bis auf natürliche Äquivalenz eindeutig
+    \item<+-> Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz
+    \item<+-> Adjungierte Situation: Quadrupel $(\G, \F, u, v)$. 
   \end{itemize}
+
+\pause
 
   \begin{ex*}
      Wieder Stone-\v{C}ech-Kompaktifizierung:
 
      $\F = \F_e \colon \CompHaus \to \Tych$.
 
+\pause
+
      \underline{Für alle} $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung bezüglich $\F_e$
      
      Also: Existiert eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$.
      \vspace{1em}
+
+\pause
 
      Wir haben (nichts-ahnend) einen Funktor konstruiert!
   \end{ex*}
@@ -249,15 +255,15 @@
 
   Dann nennen wir $\A$ \emph{reflektiv} in $\C$ genau dann, wenn eine der folgenden äquivalenten Bedingungen erfüllt ist:
   \begin{enumerate}[(1)]
-    \item $\F_e$ besitzt den Linksadjungierten Funktor $\R$.
-    \item Jedes $X \in |C|$ besitzt eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
+    \item $\F_e$ besitzt einen linksadjungierten Funktor $\R$.
+    \item Für alle $X \in |C|$ ex. eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
   \end{enumerate}
 
   \pause
   \vspace{1em}
   Funktor $\R$ nennen wir \emph{Reflektor}
   
-  Die Morphismen $r_X \colon X \to X_\A$ nennen wir Reflektionen von $X$ bezüglich $\A$.
+  Morphismen $r_X \colon X \to X_\A$ nennen wir Reflektionen von $X$ bezüglich $\A$.
 
   \pause
   \vspace{1em}
@@ -278,7 +284,86 @@
   Die Morphismen $r_X$ nennen wir \emph{Epireflektionen/ extremale Epireflektionen/ Bireflektionen}.
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Wie sehen Bireflektionen oder Bicoreflektionen denn aus?}
+\end{frame}
+
 \subsection{In topologischen Konstrukten}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Was ist so toll an bireflektiven oder bicoreflektiven Unterkategorien?} 
+
+\pause
+  Bi(co)reflektive Unterkategorien sind gutartig im folgenden Sinne:
+\pause
+
+\begin{thm*}
+  Ist $\A$ ein 
+\begin{itemize}
+\item volles,
+\item unter Isomorphie abgeschlossenes
+\item Unterkonstrukt eines topologischen Konstrukts $\C$.
+\end{itemize}
+
+\vspace{1em}
+\pause
+  und ist $\A$ bireflektiv (bicoreflektiv) in $\C$, dann:
+
+\begin{itemize}
+  \item<+-> $\A$ ist topologisch.
+\item<+-> initialen (finalen) Strukturen in $\A$ stimmen mit denen in $\C$ überein.
+\item<+-> finale (initiale) Strukturen in $\A$ entstehen aus den \\
+finalen (initialen) Strukturen in $\C$, indem man den \\Bireflektor (Bicoreflektor) anwendet.
+\end{itemize}
+\end{thm*}
+
+\pause
+\vspace{1em}
+\huge{Oha!}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Beweis}
+Sei $\A$ bicoreflektiv in $\C$...
+\pause
+\begin{enumerate}[(1)]
+\item<+-> $\A$ ist wieder topologisch:
+\begin{itemize}
+  \item<+-> Existenz und Eindeutigkeit initialer Strukturen:
+
+  Daten: $X$ Menge,$((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+
+  $\xi$ die initiale $\C$-Struktur auf $X$. 
+
+  Zurückholen der $\C$-Struktur durch Bikoreflektor:
+$$
+\1_X \colon (X, \xi_\A) \to (X, \xi) 
+$$
+Zeige nun: $\xi_\A$ ist eindeutige Initialstruktur auf $\A$ ist...
+
+\item<+-> Für alle $X$ ist $\{(Y, \eta) \in |\A| \colon Y = X \} \subset\{(Z, \zeta) \in |\C| \colon Z = X \}$ Menge.
+
+\item<+-> $X$ einelementig: Nur diskrete Struktur und diese ist eindeutig.
+\end{itemize}
+
+\item<+-> Bildung finaler Strukturen:
+\begin{itemize}
+\item<+-> $X$ Menge, $((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+\item<+-> $\xi_\A$ die finale $\A$-Struktur und $\xi_\C$ die finale $\C$-Struktur bzgl. d. Dat.
+\item<+-> $\xi_\A = \xi_\C$... \pause !
+\end{itemize}
+
+\end{enumerate}
+
+\pause
+\vspace{2em}
+Sei $\A$ bireflektiv in $\C$... Analog.
+
+\end{frame}
 
 \section{Konvergenzstrukturen und uniforme Konvergenzstrukturen}
 

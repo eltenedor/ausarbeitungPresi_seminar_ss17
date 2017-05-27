@@ -3,7 +3,7 @@
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Kategorientheorie Grundlagen (Teil II)}{3}{Kategorientheorie Grundlagen (Teil II)}{0}}
+\headcommand {\sectionentry {1}{Grundlagen der Kategorientheorie (Teil II)}{3}{Grundlagen der Kategorientheorie (Teil II)}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
@@ -24,24 +24,30 @@
 \headcommand {\beamer@subsectionentry {0}{1}{2}{21}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{20}}
 \headcommand {\slideentry {1}{2}{1}{21/24}{Adjungierte Funktoren}{0}}
 \headcommand {\beamer@framepages {21}{24}}
-\headcommand {\slideentry {1}{2}{2}{25/25}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{26}{Reflektive und coreflektive Unterkategorien}{0}}
-\headcommand {\beamer@sectionpages {3}{25}}
-\headcommand {\beamer@subsectionpages {21}{25}}
-\headcommand {\slideentry {2}{0}{1}{26/26}{}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{27}{Allgemein}}\headcommand {\beamer@subsectionpages {26}{26}}
-\headcommand {\slideentry {2}{1}{1}{27/31}{Allgemein}{0}}
-\headcommand {\beamer@framepages {27}{31}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{32}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {27}{31}}
-\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{32}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@sectionpages {26}{31}}
-\headcommand {\beamer@subsectionpages {32}{31}}
-\headcommand {\slideentry {3}{0}{1}{32/32}{}{0}}
+\headcommand {\slideentry {1}{2}{2}{25/31}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {25}{31}}
+\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{32}{Reflektive und coreflektive Unterkategorien}{0}}
+\headcommand {\beamer@sectionpages {3}{31}}
+\headcommand {\beamer@subsectionpages {21}{31}}
+\headcommand {\slideentry {2}{0}{1}{32/32}{}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@partpages {1}{32}}
-\headcommand {\beamer@subsectionpages {33}{32}}
-\headcommand {\beamer@sectionpages {32}{32}}
-\headcommand {\beamer@documentpages {32}}
-\headcommand {\def \inserttotalframenumber {14}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{33}{Allgemein}}\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\slideentry {2}{1}{1}{33/37}{Allgemein}{0}}
+\headcommand {\beamer@framepages {33}{37}}
+\headcommand {\slideentry {2}{1}{2}{38/38}{Allgemein}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{39}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {33}{38}}
+\headcommand {\slideentry {2}{2}{1}{39/46}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {39}{46}}
+\headcommand {\slideentry {2}{2}{2}{47/58}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {47}{58}}
+\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{59}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@sectionpages {32}{58}}
+\headcommand {\beamer@subsectionpages {39}{58}}
+\headcommand {\slideentry {3}{0}{1}{59/59}{}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@partpages {1}{59}}
+\headcommand {\beamer@subsectionpages {60}{59}}
+\headcommand {\beamer@sectionpages {59}{59}}
+\headcommand {\beamer@documentpages {59}}
+\headcommand {\def \inserttotalframenumber {17}}
