@@ -1,0 +1,122 @@
+\section{Reflektive und coreflektive Unterkategorien}
+
+\subsection{Allgemein}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Definition -- Reflektive Unterkategorie}
+  $A$ Unterkategorie einer Kategorie $\C$.
+  
+  $\F_e \colon \A \to \C$ der Inklusionsfunktor.
+
+  Dann nennen wir $\A$ \emph{reflektiv} in $\C$ genau dann, wenn eine der folgenden äquivalenten Bedingungen erfüllt ist:
+  \begin{enumerate}[(1)]
+    \item $\F_e$ besitzt einen linksadjungierten Funktor $\R$.
+    \item Für alle $X \in |C|$ ex. eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
+  \end{enumerate}
+
+  \pause
+  \vspace{1em}
+  Funktor $\R$ nennen wir \emph{Reflektor}
+  
+  Morphismen $r_X \colon X \to X_\A$ nennen wir Reflektionen von $X$ bezüglich $\A$.
+
+  \pause
+  \vspace{1em}
+  Durch Dualisierung erhalten wir einen weiteren Begriff:
+
+  Wir nennen $\A$ \emph{coreflektiv} in $\C$, genau dann, wenn $\A^*$ reflektiv ist in $\C^*$. 
+
+  \pause
+  \vspace{1em}
+
+  Wir nennen $\A$ \emph{epireflektiv/ extremal epireflektiv/ \textbf{bireflektiv} in} $\C$, falls 
+  \pause
+  \begin{itemize}
+    \item  $\A$ reflektiv in $\C$
+    \item  $r_X \colon X \to X_\A$ ist ein Epimorphismus/ extremaler Epimorphismus / Bimorphismus ist.
+  \end{itemize}
+   
+  Die Morphismen $r_X$ nennen wir \\\emph{Epireflektionen/ extremale Epireflektionen/ \textbf{Bireflektionen}}.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Wie sehen Bireflektionen oder Bicoreflektionen denn aus?}
+\end{frame}
+
+\subsection{In topologischen Konstrukten}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Was ist so toll an bireflektiven oder bicoreflektiven Unterkategorien?} 
+
+\pause
+  Bi(co)reflektive Unterkategorien sind gutartig im folgenden Sinne:
+\pause
+
+\begin{thm*}
+  Ist $\A$ ein 
+\begin{itemize}
+\item volles,
+\item unter Isomorphie abgeschlossenes
+\item Unterkonstrukt eines topologischen Konstrukts $\C$.
+\end{itemize}
+
+\vspace{1em}
+\pause
+  und ist $\A$ bireflektiv (bicoreflektiv) in $\C$, dann:
+
+\begin{itemize}
+  \item<+-> $\A$ ist topologisch.
+\item<+-> initialen (finalen) Strukturen in $\A$ stimmen mit denen in $\C$ überein.
+\item<+-> finale (initiale) Strukturen in $\A$ entstehen aus den \\
+finalen (initialen) Strukturen in $\C$, indem man den \\Bireflektor (Bicoreflektor) anwendet.
+\end{itemize}
+\end{thm*}
+
+\pause
+\vspace{1em}
+\huge{Oha!}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Beweis}
+Sei $\A$ bicoreflektiv in $\C$...
+\pause
+\begin{enumerate}[(1)]
+\item<+-> $\A$ ist wieder topologisch:
+\begin{itemize}
+  \item<+-> Existenz und Eindeutigkeit initialer Strukturen:
+
+  Daten: $X$ Menge,$((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+
+  $\xi$ die initiale $\C$-Struktur auf $X$. 
+
+  Zurückholen der $\C$-Struktur durch Bikoreflektor:
+$$
+\1_X \colon (X, \xi_\A) \to (X, \xi) 
+$$
+Zeige nun: $\xi_\A$ ist eindeutige Initialstruktur auf $\A$ ist...
+
+\item<+-> Für alle $X$ ist $\{(Y, \eta) \in |\A| \colon Y = X \} \subset\{(Z, \zeta) \in |\C| \colon Z = X \}$ Menge.
+
+\item<+-> $X$ einelementig: Nur diskrete Struktur und diese ist eindeutig.
+\end{itemize}
+
+\item<+-> Bildung finaler Strukturen:
+\begin{itemize}
+\item<+-> $X$ Menge, $((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+\item<+-> $\xi_\A$ die finale $\A$-Struktur und $\xi_\C$ die finale $\C$-Struktur bzgl. d. Dat.
+\item<+-> $\xi_\A = \xi_\C$... \pause !
+\end{itemize}
+
+\end{enumerate}
+
+\pause
+\vspace{2em}
+Sei $\A$ bireflektiv in $\C$... Analog.
+
+\end{frame}

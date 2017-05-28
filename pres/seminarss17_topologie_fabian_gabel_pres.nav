@@ -21,33 +21,38 @@
 \headcommand {\beamer@framepages {17}{17}}
 \headcommand {\slideentry {1}{1}{6}{18/20}{Funktoren allgemein}{0}}
 \headcommand {\beamer@framepages {18}{20}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{21}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{20}}
-\headcommand {\slideentry {1}{2}{1}{21/24}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {21}{24}}
-\headcommand {\slideentry {1}{2}{2}{25/31}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {25}{31}}
-\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{32}{Reflektive und coreflektive Unterkategorien}{0}}
-\headcommand {\beamer@sectionpages {3}{31}}
-\headcommand {\beamer@subsectionpages {21}{31}}
-\headcommand {\slideentry {2}{0}{1}{32/32}{}{0}}
-\headcommand {\beamer@framepages {32}{32}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{33}{Allgemein}}\headcommand {\beamer@subsectionpages {32}{32}}
-\headcommand {\slideentry {2}{1}{1}{33/37}{Allgemein}{0}}
-\headcommand {\beamer@framepages {33}{37}}
-\headcommand {\slideentry {2}{1}{2}{38/38}{Allgemein}{0}}
-\headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{39}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {33}{38}}
-\headcommand {\slideentry {2}{2}{1}{39/46}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {39}{46}}
-\headcommand {\slideentry {2}{2}{2}{47/58}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {47}{58}}
-\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{59}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@sectionpages {32}{58}}
-\headcommand {\beamer@subsectionpages {39}{58}}
-\headcommand {\slideentry {3}{0}{1}{59/59}{}{0}}
-\headcommand {\beamer@framepages {59}{59}}
-\headcommand {\beamer@partpages {1}{59}}
-\headcommand {\beamer@subsectionpages {60}{59}}
-\headcommand {\beamer@sectionpages {59}{59}}
-\headcommand {\beamer@documentpages {59}}
-\headcommand {\def \inserttotalframenumber {17}}
+\headcommand {\slideentry {1}{1}{7}{21/25}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {21}{25}}
+\headcommand {\slideentry {1}{1}{8}{26/33}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {26}{33}}
+\headcommand {\slideentry {1}{1}{9}{34/36}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {34}{36}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{37}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{36}}
+\headcommand {\slideentry {1}{2}{1}{37/39}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {37}{39}}
+\headcommand {\slideentry {1}{2}{2}{40/42}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {40}{42}}
+\headcommand {\slideentry {1}{2}{3}{43/49}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {43}{49}}
+\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{50}{Reflektive und coreflektive Unterkategorien}{0}}
+\headcommand {\beamer@sectionpages {3}{49}}
+\headcommand {\beamer@subsectionpages {37}{49}}
+\headcommand {\slideentry {2}{0}{1}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{51}{Allgemein}}\headcommand {\beamer@subsectionpages {50}{50}}
+\headcommand {\slideentry {2}{1}{1}{51/55}{Allgemein}{0}}
+\headcommand {\beamer@framepages {51}{55}}
+\headcommand {\slideentry {2}{1}{2}{56/56}{Allgemein}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{57}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {51}{56}}
+\headcommand {\slideentry {2}{2}{1}{57/64}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {57}{64}}
+\headcommand {\slideentry {2}{2}{2}{65/76}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {65}{76}}
+\headcommand {\slideentry {1}{2}{4}{49/51}{}{0}}
+\headcommand {\beamer@framepages {49}{51}}
+\headcommand {\beamer@partpages {1}{51}}
+\headcommand {\beamer@subsectionpages {57}{51}}
+\headcommand {\beamer@sectionpages {50}{51}}
+\headcommand {\beamer@documentpages {51}}
+\headcommand {\def \inserttotalframenumber {16}}

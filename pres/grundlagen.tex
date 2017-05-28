@@ -1,0 +1,333 @@
+\section{Grundlagen der Kategorientheorie (Teil II)}
+
+\subsection{Funktoren allgemein}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Vokabelheft}
+  Objekte verhalten sich zu Morphismen wie
+  Kategorien zu \only<1>{???}\only<2,3>{Funktoren.}
+  \pause
+  \begin{defn*}
+  Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
+  Dann nennen $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls folgende Bedingungen erfüllt sind:
+  \begin{enumerate}[F1)]
+    \item $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(A), \F(B)]_\De$.
+    \item $\F(f \circ g) = \F(f) \circ \F(g)$, falls $f \circ g$ definiert ist.
+    \item $\F(1_A) = 1_{\F(A)}$ für alle $A \in |\C|$.
+  \end{enumerate}
+  Abkürzend: $\F \colon \C \to \De$. (\emph{Homomorphismus von Morphismen})
+
+  \pause
+  \vspace{1em}
+  \emph{Kontravarianter Funktor}, falls modifiziert:
+\begin{enumerate}[F1')]
+  \item[F2')] $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(B), \F(A)]_\De$.
+  \item[F3')] $\F(f \circ g) = \F(g) \circ \F(f)$, falls $f \circ g$ existiert.
+\end{enumerate}
+  \end{defn*}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Beispiele}
+  \begin{enumerate}[a)]
+      \item<+-> Konstanter Funktor:
+      $\C,\De$ Kategorien, $X \in |\De|$.
+
+        $\forall A \in |\C|$ und $\forall f \in \Mor_\C$ durch $\F(A) \coloneqq X$ und $\F(f) \coloneqq 1_X$ 
+        
+        (kovariant und contravariant).
+      \item<+-> Vergissfunktor: $\C$ ein (topologisches) Konstrukt: 
+        
+        $\F \to \Set$ definiert durch $\F((X, \xi)) = X$ und $\F(f) = f$.
+      \item<+-> Dualisierender Funktor: 
+        
+        $\F \colon \C \to \C^*$ definiert durch $\F(X) = X$ und $F(f) = f^*$ (contravariant).
+      \item<+-> Dualer Funktor: $\F \colon \C \to \De$ ein Funktor: 
+        
+        $\F^* \coloneqq \Delta_{\De} \circ F \circ \Delta_{\C^*}$
+        
+      \item<+-> Identitätsfunktor $\I_\C$: 
+        
+        $\F \colon \C \to \C$ definiert durch $\F(X) = X$ und $\F(f) = f$.
+
+      \item<+-> Inklusionsfunktor: 
+        
+        Sei $\C$ eine Kategorie und $\A$ eine \emph{Unterkategorie}, dh 
+        \begin{enumerate}[1.]
+          \item $|\A| \subset |\C|$,
+          \item $[A, B]_\A \subset [A,B]_\C$ für alle $(A, B) \in |\A| \times |\A|$,
+          \item Komposition von Mor. in $\A$ wie in $\C$; Identitätsmorphismus derselbe.
+        \end{enumerate}
+        Gilt sogar $[A, B]_\A = [A, B]_\C$: \emph{volle} Unterkategorie.
+
+        $\F_e \coloneqq \I_\C |_\A$
+    \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{Definition -- Universelle Abbildung}
+  $\A$ und $\B$ Kategorien, $\F \colon \A \to \B$ Funktor und $B \in |\B|$.
+  \vspace{1em}
+
+  Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls $\forall A' \in |\A|$ und $\forall f \colon B \to \F(A')$ 
+  
+  genau ein $\A$-Morphismus $\overline f \colon A \to A'$ ex., so dass das Diagramm
+  $$
+  \begin{tikzcd}
+    B \arrow[rd,"u"'] \arrow[rr, "f"] &&\F(A') \\
+    &\F(A) \arrow[ru, "\F(\overline{f})"']
+  \end{tikzcd}
+  $$
+  kommutiert.
+  \pause
+
+  Entsprechend: Paar $(A,u)$ mit $A \in |\A|$ und $u \colon \F(A) \to B$: 
+  \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls $(u^*, A)$ eine universelle Abbildung für $B$ bezüglich des Funktors $\F^* \colon \A^* \to \B^*$ ist:
+  $$
+  \begin{tikzcd}[row sep=2.5em]
+    B  &&  \arrow[ll, "f"] \F(A')\arrow[ld, "\F(\overline{f})"]  \\
+    & \arrow[lu,"u"]\F(A) & 
+  \end{tikzcd}
+  $$
+  kommutiert.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Das Prinzip bei der Arbeit}
+  $$
+  \begin{tikzcd}
+    B \arrow[rd,"u"'] \arrow[rr, "f"] &&\F(A') \\
+    &\F(A) \arrow[ru, "\F(\overline{f})"']
+  \end{tikzcd}
+  $$
+  Schonmal gesehen bei der Stone-\v{C}ech-Kompaktifizierung?
+  \vspace{1em}
+  \pause
+
+  $\F = \F_e \colon \CompHaus \to \Tych$.
+
+  Für alle $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung:
+
+  $Y \in \CompHaus$ und $f \in [X, \F_e(Y)]_{\Tych}$, liefert Satz von Stone-\v{C}ech gerade:
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        X \arrow[rd,"e_X"'] \arrow[rr, "f"] &&\F_e(Y) = Y \\
+        &\F_e(\beta(X)) = \beta(X) \arrow[ru, "\F_e(\overline{f})"']
+      \end{tikzcd}
+      $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Weitere Beispiele}
+  \begin{itemize}
+    \item T0-ifizierung
+    \item Vergissfunktor
+  \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Die \emph{richtigen} Abbildungen zwischen Funktoren}
+  Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
+  \begin{enumerate}[1)]
+    \item<+-> Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+      $$
+      \begin{tikzcd}[row sep=2.5em]
+        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"'] & \G(A)\arrow[d,"\G(f)"] \\
+        \F(B)\arrow[r,"\eta_B"] & \G(B)
+      \end{tikzcd}
+      $$
+      kommutiert. Kurz: $\eta \colon \F \to \G$ (Morphismus von Funktoren in $\Cat$).
+    \item<+-> Eine natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls für alle $A \in |\C|$ der Morphismus $\eta_A$ ein Isomorphismus ist.
+    \item<+-> $\F$ und $\G$ heißen \emph{natürlich äquivalent},  wenn eine natürliche Äquivalenz $\eta \colon \F \to \G$ existiert. Kurz: $\F \approx \G$.
+  \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Universelle Abbildungen und natürliche Transformationen}
+  \begin{thm*}
+    Sei $\F \colon \A \to \B$ Funktor und \\
+    $\forall B \in |\B|$ ex univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
+    Dann ex. genau ein Funktor $\G \colon \B \to \A$ mit
+    \pause
+    \begin{itemize}
+      \item $\forall B \in \B \colon \G(B) = A_B$.
+      \item $u = (u_B)_{B \in |\B|} \colon \I_B \to \G \circ \F$ ist natürliche Transformation.
+    \end{itemize}
+  \end{thm*}
+  \pause
+
+  \begin{block}{Beweis.}
+  Setze $\forall B \in |\B| \colon \G(B) \coloneqq A_B$.
+    \pause
+    $$
+    \begin{tikzcd}[row sep=2.5em]
+      \I_\B(B)  = B \arrow[r,"u_B"] \arrow[d,"f"'] & \F(A_B)     = \F(\G(B)) \arrow[d,"\F(\overline f)"] 
+      \\ 
+      \I_\B(B') = B'\arrow[r,"u_{B'}"]              & \F(A_{B'})  = \F(\G(B')) \\
+    \end{tikzcd}
+    $$
+    \pause
+    Definiert $\G(f) \coloneqq \overline f$ einen Funktor? 
+    \begin{itemize}
+      \item Dann w\"are $(u_B)_{B \in |\B|}$ eine nat\"urliche Transformation.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Universelle Abbildungen und natürliche Transformationen}
+  \begin{thm*}
+    Sei $\F \colon \A \to \B$ Funktor und \\
+    $\forall B \in |\B|$ ex univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
+    Dann ex. genau ein Funktor $\G \colon \B \to \A$ mit
+    \begin{itemize}
+      \item $\forall B \in \B \colon \G(B) = A_B$.
+      \item $u = (u_B)_{B \in |\B|} \colon \I_B \to \G \circ \F$ ist natürliche Transformation.
+    \end{itemize}
+  \end{thm*}
+
+  \begin{proof}
+    Setze $\forall B \in |\B| \colon \G(B) \coloneqq A_B$ und versuche $\forall f \in \Mor_\B \colon \G(f) \coloneqq \overline f$:\\
+    Es kann h\"ochstens einen solchen Funktor geben!
+    \vspace{1em}
+    \pause
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+    $$
+        \begin{tikzcd}[column sep=3.5em,row sep=2.5em]
+          B \arrow[r,"u_B"] \arrow[d,"f"'] \arrow[dd,"g \circ f"',bend right=60]    & \F(A_B)    \arrow[d,"\F(\overline f)"] \arrow[dd, bend left=60, "\F(\overline g \circ \overline f)"] 
+      \\ 
+      B'\arrow[r,"u_{B'}"] \arrow[d,"g"'] & \F(A_{B'}) \arrow[d ,"\F(\overline g)"] \\
+      B''\arrow[r,"u_{B''}"]              & \F(A_{B''}) 
+    \end{tikzcd}
+    $$
+      \end{column}
+      \pause
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item<+-> $\F(\overline g \circ \overline f) = \F(\overline g) \circ \F(\overline f)$
+          \item<+-> Eindeutigkeit: $\overline{g \circ f} = \overline g \circ \overline f $
+          \item<+-> $\G(g \circ f) = \G( g ) \circ \G( f) $
+          \item<+-> Identit\"at: $\overline{1_B} = 1_{A_B}$
+          \item<+-> $\G(1_B) = 1_{\G(B)}$ 
+          \item<+-> Nicht ganz sauber... \qedhere
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{proof}
+  \vspace{0.25em}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{solange die Kuh noch Milch gibt...}
+  \begin{thm*}
+    Sei $\F \colon \A \to \B$ Funktor und \\
+    $\forall B \in |\B|$ ex univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
+    Dann ex. genau ein Funktor $\G \colon \B \to \A$ mit
+    \begin{itemize}
+      \item $\forall B \in \B \colon \G(B) = A_B$.
+      \item $u = (u_B)_{B \in |\B|} \colon \I_B \to \G \circ \F$ ist natürliche Transformation.
+    \end{itemize}
+  \end{thm*}
+\pause
+  \begin{kor*}
+    Es ex. genau eine nat\"urliche Transformation $v = (v_A) \colon \G \circ \F \to \I_A$ mit
+    \begin{itemize}
+      \item $\forall A \in |\A| \colon \F(v_A) \circ u_{\F(A)} = 1_{\F(A)}$,
+      \item $\forall B \in |\B| \colon v_{\G(B)} \circ \G(u_B) = 1_{\G(B)}$.
+    \end{itemize}
+  \end{kor*}
+\vspace{1em}
+\pause
+  \begin{block}{Idee}
+Mache Satz und Korollar zur Definition und untersuche die dadurch enstehenden Objekte...
+  \end{block}
+
+\end{frame}
+\subsection{Adjungierte Funktoren}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Adjungierter Funktor}
+
+\pause
+  \begin{defn*}
+  Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und \\
+    $u = (u_B) \colon \I_\B \to \F \circ \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ nat. Trans. mit 
+  \begin{enumerate}[(1)]
+    \item $\F(v_A) \circ u_{\F(A)} = \1_{\F(A)}$ für alle $A \in |\A|$ und
+    \item $v_{\G(B)} \circ \G(u_B) = \1_{\G(B)}$ für alle $B \in |\B|$,
+  \end{enumerate}
+  so nennen wir\\
+    $\G$ den \emph{zu $\F$ linksadjungierten Funktor} und analog nennen wir \\
+    $\F$ den \emph{zu $\G$ rechtsadjungierten Funktor}.\\
+  Das Paar $(\G, \F)$ nennen wir ein \emph{Paar adjungierter Funktoren}.
+\end{defn*}
+
+    \pause
+    $$
+    \begin{tikzcd}[column sep=2.5em,row sep=1.5em]
+      & & \ \arrow[d,"u",Rightarrow] & \\  
+      \A \arrow[r,"\F"]\arrow[rr,"\I_\A"',bend right=60 ] & \B \arrow[r,"\G"] \arrow[rr,"\I_\B", bend left=60] \arrow[d,"v",Rightarrow] & \A \arrow[r,"\F"] & \B \\
+      & \  &  &
+    \end{tikzcd}
+    $$
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+
+  \begin{block}{Ey Mann, wo sind meine universellen Abbildungen?}
+    \pause
+    $\forall B \in |\B|$ liefert $(u_B, \G(B))$ das Gew\"unschte.
+  \end{block}
+
+\pause
+
+  \begin{block}{Zusammenfassung}
+    Ein Funktor $\F \colon \A \to \B$ besitzt einen linksadjungierten Funktor $\G \colon \B \to \A$ genau dann, wenn für alle $B \in |\B|$ eine bezüglich $\F$ universelle Abbildung existiert.
+  \end{block}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Adjungierte Situation}
+
+  \begin{itemize}
+    \item<+-> Adjungierte Funktoren sind bis auf natürliche Äquivalenz eindeutig
+    \item<+-> Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz
+    \item<+-> Adjungierte Situation: Quadrupel $(\G, \F, u, v)$. 
+  \end{itemize}
+
+\pause
+
+  \begin{ex*}
+     Wieder Stone-\v{C}ech-Kompaktifizierung:
+
+     $\F = \F_e \colon \CompHaus \to \Tych$.
+
+\pause
+
+     \underline{Für alle} $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung bezüglich $\F_e$
+     
+     Also: Existiert eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$.
+     \vspace{1em}
+
+\pause
+
+     Wir haben (nichts-ahnend) einen Funktor konstruiert!
+  \end{ex*}
+
+\end{frame}
+
