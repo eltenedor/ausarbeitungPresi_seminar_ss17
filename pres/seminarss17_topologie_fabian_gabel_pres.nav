@@ -42,17 +42,41 @@
 \headcommand {\beamer@subsectionentry {0}{2}{1}{51}{Allgemein}}\headcommand {\beamer@subsectionpages {50}{50}}
 \headcommand {\slideentry {2}{1}{1}{51/55}{Allgemein}{0}}
 \headcommand {\beamer@framepages {51}{55}}
-\headcommand {\slideentry {2}{1}{2}{56/56}{Allgemein}{0}}
-\headcommand {\beamer@framepages {56}{56}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{57}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {51}{56}}
-\headcommand {\slideentry {2}{2}{1}{57/64}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {57}{64}}
-\headcommand {\slideentry {2}{2}{2}{65/76}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {65}{76}}
-\headcommand {\slideentry {1}{2}{4}{49/51}{}{0}}
-\headcommand {\beamer@framepages {49}{51}}
-\headcommand {\beamer@partpages {1}{51}}
-\headcommand {\beamer@subsectionpages {57}{51}}
-\headcommand {\beamer@sectionpages {50}{51}}
-\headcommand {\beamer@documentpages {51}}
-\headcommand {\def \inserttotalframenumber {16}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{56}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {51}{55}}
+\headcommand {\slideentry {2}{2}{1}{56/65}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {56}{65}}
+\headcommand {\slideentry {2}{2}{2}{66/73}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {66}{73}}
+\headcommand {\slideentry {2}{2}{3}{74/85}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {74}{85}}
+\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{86}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@sectionpages {50}{85}}
+\headcommand {\beamer@subsectionpages {56}{85}}
+\headcommand {\slideentry {3}{0}{1}{86/86}{}{0}}
+\headcommand {\beamer@framepages {86}{86}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{87}{Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {86}{86}}
+\headcommand {\slideentry {3}{1}{1}{87/93}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {87}{93}}
+\headcommand {\slideentry {3}{1}{2}{94/94}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {94}{94}}
+\headcommand {\slideentry {3}{1}{3}{95/95}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {95}{95}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{96}{Uniforme Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {87}{95}}
+\headcommand {\slideentry {3}{2}{1}{96/102}{Uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {96}{102}}
+\headcommand {\slideentry {3}{2}{2}{103/104}{Uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {103}{104}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{105}{Bindeglied zwischen beiden Strukturen}}\headcommand {\beamer@subsectionpages {96}{104}}
+\headcommand {\slideentry {3}{3}{1}{105/105}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\slideentry {3}{3}{2}{106/106}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {106}{106}}
+\headcommand {\slideentry {3}{3}{3}{107/107}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {107}{107}}
+\headcommand {\slideentry {3}{3}{4}{108/108}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\beamer@partpages {1}{108}}
+\headcommand {\beamer@subsectionpages {105}{108}}
+\headcommand {\beamer@sectionpages {86}{108}}
+\headcommand {\beamer@documentpages {108}}
+\headcommand {\def \inserttotalframenumber {30}}

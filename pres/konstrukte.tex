@@ -2,5 +2,245 @@
 \section{Konvergenzstrukturen und uniforme Konvergenzstrukturen}
 
 \subsection{Konvergenzstrukturen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Konvergenzstrukturen: $\GConv$ und ihre Kinder}
+
+  \begin{enumerate}[a)]
+    \item $X$ Menge, $\FF(X)$ Menge der Filter auf $X$. \\
+      Ein \emph{verallgemeinerter Konvergenzraum} ist \\
+      ein Paar $(X,q)$: $q \subset \FF(X) \times X$ mit
+      \begin{enumerate}[C1)]
+        \item $\forall x \in X\colon (\dot x, x) \in q$ 
+        \item  $(F,x) \in q$ und $G \supset F \Rightarrow (\G, x) \in q$
+      \end{enumerate}
+    \item $f \colon (X,q) \to (X',q')$ heißt \emph{stetig}, falls $\forall (\F,x) \in q \colon (f(\F), f(x)) \in q'$.
+  \end{enumerate}
+  \pause
+  Ein verallgemeinerter Konvergenzraum heißt
+  \begin{enumerate}[a)]
+    \item[c)]<+-> \emph{Kent-Konvergenzraum}, falls:
+      \begin{enumerate}
+        \item[C3)] $(\F, x) \in q \Rightarrow (\F \cap \dot x, x) \in q$.
+      \end{enumerate}
+    \item[d)]<+-> \emph{Limesraum}, falls:
+      \begin{enumerate}
+        \item[C4)] $((\F,x) \in q$ und $(\G,x) \in q) \Rightarrow (\F \cap \G, x) \in q$.
+      \end{enumerate}
+    \item[e)]<+-> \emph{Pseudotopologischer Raum}, falls:
+      \begin{enumerate}
+        \item[C5)] $((\U, x) \in q$ für alle Ultrafilter $\U \supset \F) \Rightarrow (\F,x) \in q$.
+      \end{enumerate}
+    \item[f)]<+-> \emph{Prätopologischer Raum}, falls:
+      \begin{enumerate}
+        \item[C6)] $\forall x \in X \colon (\U_q(x), x) \in q$, wobei $\U_q(x) \coloneqq \bigcap\{ \F \in F(X) \colon (\F, x) \in q\}$
+      \end{enumerate}
+  \end{enumerate}
+  \pause
+  Ein prätopologischer Raum $(X,q)$ heißt 
+  \begin{enumerate}[a)]
+    \item[g)] \emph{topologischer (pr\"atopologischer) Raum}, falls:
+      \begin{enumerate}
+        \item[C7)] $\forall U \in \U_q(x)$ existiert $V \in \U_q(x)$, sodass $\forall y \in V \colon U \in \U_q(y)$.
+      \end{enumerate}
+  \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Inklusionskette}
+  $$
+  \GConv \supset \KConv \supset \Lim \supset \PsTop \supset \PrTop \supset \TPrTop
+  $$
+
+  \begin{block}{Proposition}
+    $\KConv$ ist bireflektives und bicoreflektives Unterkonstrukt von $\GConv$.
+  \end{block}
+
+  \begin{block}{Propostion}
+    Alle restlichen Konstrukte sind bireflektive Unterkonstrukte ihrer Vorg\"anger.
+  \end{block}
+
+  \begin{block}{Beweisidee}
+    Naheliegende Modifikation (Vergr\"osserung) der Konvergenzstruktur zusammen mit der $\Set$-Abbildung $1_X$ liefert das Gew\"unschte.
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Zwischen Konvergenz und Topologie}
+
+  Ist $(X,q) \in |\GConv|$, so l\"asst sich eine Topologie $\tau_q$ definieren durch
+  $$
+  O \in \tau_q \iff \forall x \in X, \F \in F(X) \text{ mit } (\F, x) \in q \text{ gilt } O \in \F.
+  $$
+
+  Ist $(X,\tau)$ Topologie auf $X$, so l\"asst sich $\TPrTop$-Struktur definieren durch:
+  $$
+  (\F, x) \in q_\tau \iff \F \supset \underline{\mathrm{U}}^\tau(x)
+  $$
+
+  Wir erkennen, dass
+  \begin{enumerate}[(1)]
+    \item $\tau_{q_\tau} = \tau$ f\"ur jede Topologie $\tau$,
+    \item $q_{\tau_q} = q$ f\"ur jede $\TPrTop$-Struktur $q$.
+  \end{enumerate}
+
+  \"Ahnliches zeigt sich f\"ur die stetigen Abbildungen.
+  \vspace{1em}\\
+  Folglich: $\Top$ und $\TPrTop$ sind (konkret) isomorphe Kategorien.
+  \vspace{1em}\\
+  Wir m\"ussen also nicht zwischen beiden Kategorien unterscheiden.
+\end{frame}
+
 \subsection{Uniforme Konvergenzstrukturen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Uniforme Konvergenzstrukturen}
+  \begin{enumerate}[a)]
+    \item<+-> $X$ Menge, $\mathrm{F}(X)$ Menge der Filter auf $X$.\\
+      Ein \emph{semiuniformer Konvergenzraum} ist \\
+      ein Paar $(X, \J_X) \subset X \times \mathrm{F}(X \times X)$, (\emph{uniforme Filter}) mit: 
+      \begin{enumerate}[UC1)]
+         \item $\forall x \in X \colon (\dot x \times \dot x) \in \J_X$.
+         \item $(\F \in \J_X$ und $\F \subset \G) \Rightarrow \G \in \J_X$.
+         \item $\F \in \J_X \Rightarrow \F^{-1} = \{F^{-1} \colon F \in \F\} \in \J_X$.
+      \end{enumerate}
+    \item<+-> $f \colon (X, \J_X) \to (Y, \J_Y)$ heißt \emph{gleichmäßig stetig}, falls $(f \times f)(\J_X) \subset \J_Y$.
+  \end{enumerate}
+  \pause
+  Ein semiuniformer Konvergenzraum heißt 
+\begin{enumerate}[a)]
+  \item[c)]<+-> \emph{semiuniformer Limesraum}, falls:
+    \begin{enumerate}[UC1)]
+      \item[UC4)] $(F \in \J_X$ und $\G \in \J_X) \Rightarrow \F \cap \G \in \J_X$.
+    \end{enumerate}
+  \item[d)]<+-> \emph{uniformer Limesraum}, falls:
+    \begin{enumerate}[UC1)]
+      \item[UC5)] $(\F \in \J_X$ und $\G \in \J_X) \Rightarrow \F \circ \G \in \J_X$.
+    \end{enumerate}
+  \end{enumerate}
+  \pause
+  Ein uniformer Limesraum $(X, \J_X)$ heißt
+  \begin{enumerate}[a)]
+    \item[e)]<+-> \emph{Haupt-uniformer Limesraum} falls $\emptyset \neq \F \subset \Pot(X \times X)$ ex.
+      \begin{itemize}
+        \item  mit endlicher Durchschnitsseigenschaft, 
+        \item abg. geg. Obermengenbildung und 
+        \item $[F] \coloneqq \{\G \in F(X\times X) \colon \G \supset \F \}= \J_X$.
+      \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Inklusionskette}
+  \begin{block}{Proposition}
+  Jedes der Konstrukte der Inklusionskette
+  $$
+  \SUConv \supset \SULim \supset \ULim \supset \PrULim
+  $$
+  ist ein bireflektives, volles und unter Isomorphie abgeschlossenes Unterkonstrukt der vorangehenden.
+  \end{block}
+  \pause
+  \begin{block}{Wo bleibt die Kategorie die uniformen Räume $\Unif$?}
+    Ist $(X,\W) \in |\Unif|$ so ist $(X,[\W]) \in |\SUConv|$, wobei
+    $$
+    [\W] \coloneqq \{\F \in \mathrm{F}(X \times X) \colon \F \supset \W \}.
+    $$
+    Sind $(X,\W)$ und $(Y,\R)$ in $|\Unif|$, so sind äquivalent:
+    \begin{enumerate}[(1)]
+      \item $f \colon (X, [\W]) \to (Y, [\R])$ is glm. stetig in $\SUConv$
+      \item $f \colon (X,\W) \to (Y,\R)$ ist glm. stetig in $\Unif$
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
 \subsection{Bindeglied zwischen beiden Strukturen}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Bindeglied zwischen beiden Strukturen}
+  \begin{block}{Cauchy-Filter}
+    $(X,\J_X) \in |\SUConv|$.
+
+    $\F \in \mathrm{F}(X)$ heißt ($\J_X$-)\emph{Cauchy}-Filter, falls $\F \times \F \in \J_X$
+  \end{block}
+
+  Ähnlich dem Übergang $\Top \to \GConv$ legen wir nun einfach fest,\\ welche Filter Cauchy sein sollen.
+
+  \begin{block}{Definition}
+    $X$ Menge. Ein Paar $(X, \gamma)$ mit $\gamma \subset \mathrm{F}(X)$ heißt \emph{Filterraum}, falls
+    \begin{enumerate}[F1)]
+      \item $\forall x \in X \colon \dot x \in \gamma$
+      \item $(\F \in \gamma$ und $\F \subset \G) \implies \G \in \gamma$
+    \end{enumerate}
+  \end{block}
+
+  \begin{block}{Definition}
+    $(X, \J_X)$ heißt $\Fil$-bestimmt, falls $J_X = J_{\gamma_{J_X}}$ gilt. 
+    
+    Hierbei ist
+    $\gamma_{J_X}$ Menge der $\J_X$-Cauchy-Filter und $\J_\gamma \coloneqq \{ \F \in \mathrm{F}(X \times X) \colon \exists G \in \gamma \colon \F \supset \G \times \G\}$
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Ist nun alles vollständig?}
+
+  Bekanntes Prinzip: Eigenschaften uniformer Räume zur Definition machen.
+
+  \begin{block}{Definition}
+    $(X, \gamma) \in |\Fil|$ heißt \emph{vollständig}, falls $\forall \F \in \gamma$ ein $x \in X$ ex. mit $\F \cap \dot x \in \gamma$.
+  \end{block}
+
+  \begin{block}{Proposition}
+    $\CFil$ (vollst. Filterräume) ist volles und unter Isomophie abgeschlossenes bicoreflektives Unterkonstrukt von $\Fil$.
+  \end{block}
+
+  Ebenso verfahren wir mit der \emph{Symmetrie} topologischer Räume (R0-Eigenschaft).
+
+  \begin{block}{Definition}
+    $(X,q)$ heißt \emph{symmetrisch}, falls $((\F,x) \in q)  und (y \in \bigcap _{F \in \F)} \Rightarrow (F,y) \in q$.
+  \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Zielgerade}
+  \begin{enumerate}[1)]
+    \item \begin{enumerate}[a)]  
+        \item Sei $(X, \gamma)$ ein Filterraum. Dann wird eine symmetrische Kent Konvergenzstruktur $q_\gamma$ auf $X$ definiert durch
+          $$
+          (\F, x) \in q_\gamma \iff \F \cap \dot x \in \gamma
+          $$
+        \item Ist $f \colon (X, \gamma) \to (X', \gamma')$ eine Cauchy-stetige Abbildung zwischen Filterräumen, so ist $f \colon (X, q_\gamma)$ stetig.
+      \end{enumerate}
+    \item \begin{enumerate}[a)]
+        \item Sei $(X, q)$ ein Kent Konvergenzraum. Dann wird eine vollständige $\Fil$-Struktur $\gamma_q$ auf $X$ definiert durch
+          $$
+          \gamma_q = \{ \F \in \FF(X) \colon \exists x \in X \colon (\F, x ) \in q \}.
+          $$
+        \item Ist $f \colon (X, q) \to (X', q')$ eine stetige Abbildung zwischen Kent Konvergenzräumen, dann ist $f \colon (X, \gamma_q) \to (X', \gamma_{g'})$ Cauchy-stetig.
+      \end{enumerate}
+    \item Das Konstrukt $\CFil$ ist konkret isomorph zum Konstrukt $\KConv_\Sy$ der symmetrischen Kent Konvergenzräume (und stetigen Abbildungen).
+  \end{enumerate}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Übersicht}
+$$
+\begin{tikzcd}[column sep=5.5em,row sep=2.5em]
+  \SUConv              &        & \GConv \\
+  \SULim \arrow[u,"r"] &  \Fil\arrow[lu,"rc"]  & \KConv   \arrow[u,"rc"] \\
+  \ULim  \arrow[u,"r"] &        & \KConv_\Sy \arrow[lu,"c"]    \arrow[u,"r"]    \\
+  \Unif  \arrow[u,"r"] &        & \Lim_\Sy   \arrow[u,"r"]    \\
+                       &        & \PsTop_\Sy \arrow[u,"r"]    \\
+                       &        & \PrTop_\Sy \arrow[u,"r"]    \\
+                       &        & \Top_\Sy   \arrow[u,"r"]    
+\end{tikzcd}
+$$
+\end{frame}

@@ -1,24 +1,12 @@
-\frametitle{Adjungierter Funktor}
-
-\pause
-  \begin{defn*}
-  Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und \\
-    $u = (u_B) \colon \I_\B \to \F \circ \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ nat. Trans. mit
-  \begin{enumerate}[(1)]
-    \item $\F(v_A) \circ u_{\F(A)} = \1_{\F(A)}$ für alle $A \in |\A|$ und
-    \item $v_{\G(B)} \circ \G(u_B) = \1_{\G(B)}$ für alle $B \in |\B|$,
-  \end{enumerate}
-  so nennen wir\\
-    $\G$ den \emph{zu $\F$ linksadjungierten Funktor} und analog nennen wir \\
-    $\F$ den \emph{zu $\G$ rechtsadjungierten Funktor}.\\
-  Das Paar $(\G, \F)$ nennen wir ein \emph{Paar adjungierter Funktoren}.
-\end{defn*}
-
-    \pause
-    $$
-    \begin{tikzcd}[column sep=2.5em,row sep=1.5em]
-      & & \ \arrow[d,"u",Rightarrow] & \\
-      \A \arrow[r,"\F"]\arrow[rr,"\I_\A"',bend right=60 ] & \B \arrow[r,"\G"] \arrow[rr,"\I_\B", bend left=60] \arrow[d,"v",Rightarrow] & \A \arrow[r,"\F"] & \B \\
-      & \  &  &
-    \end{tikzcd}
-    $$
+\frametitle{Übersicht}
+$$
+\begin{tikzcd}[column sep=5.5em,row sep=2.5em]
+  \SUConv              &        & \GConv \\
+  \SULim \arrow[u,"r"] &  \Fil\arrow[lu,"rc"]  & \KConv   \arrow[u,"rc"] \\
+  \ULim  \arrow[u,"r"] &        & \KConv_\Sy \arrow[lu,"c"]    \arrow[u,"r"]    \\
+  \Unif  \arrow[u,"r"] &        & \Lim_\Sy   \arrow[u,"r"]    \\
+                       &        & \PsTop_\Sy \arrow[u,"r"]    \\
+                       &        & \PrTop_\Sy \arrow[u,"r"]    \\
+                       &        & \Top_\Sy   \arrow[u,"r"]
+\end{tikzcd}
+$$

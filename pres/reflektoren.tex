@@ -40,12 +40,43 @@
   Die Morphismen $r_X$ nennen wir \\\emph{Epireflektionen/ extremale Epireflektionen/ \textbf{Bireflektionen}}.
 \end{frame}
 
+\subsection{In topologischen Konstrukten}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Wie sehen Bireflektionen oder Bicoreflektionen denn aus?}
-\end{frame}
+\frametitle{Wie sehen Bicoreflektionen denn aus?}
 
-\subsection{In topologischen Konstrukten}
+Im Falle von topologischen Konstrukten: ganz einfach!
+
+  \pause
+
+  \begin{block}{Lemma}
+  Jedes coreflektive, volle und unter Isomorphie abgeschlossene Unterkonstrukt $\A$ eines topologischen Konstrukts $\C$ ist bicoreflektiv, falls $|\A|$ mindestens ein Element mit nicht leerer zugrunde liegender Menge enthält.
+  \end{block}
+
+  \pause
+  Betrachte also ein Unterkonstrukt obiger Bauart. Dann:
+
+  \begin{itemize}
+    \item<+-> Für $(X, \xi) \in |\C|$: $c_X \colon (Y_\A, \eta_\A) \to (X, \xi)$ bijektiv.
+    \item<+-> es ex. $\C$-Struktur $\xi_\A$ auf $X$, sodass $c_X \colon (Y_\A, \eta_\A) \to (X, \xi_\A)$ Iso.
+
+    \item<+-> $(X, \xi_\A) \in |\A|$ (Abgeschlossenheit)
+    \item<+-> $\xi_\A$ gröbste aller $\C$-Strukturen $\xi'$, mit $\xi' \leq \xi$ und $(X, \xi') \in |\A|$.
+
+    \item<+->  $c_X \circ c_X^{-1} = 1_X \colon (X,\xi_A) \to (X,\xi)$ ist universelle Abbildung...
+
+    \item<+-> $((X,\xi_\A),1_X)$ Coreflektion von $(X,\xi)$ bez\"uglich $\A$.\qedhere
+
+  \end{itemize}
+
+  \pause
+
+  \begin{block}{Fazit}
+    Man erhält die Coreflektion eines  $\C$-Objekts $(X,\xi)$ bezüglich $\A$ durch eine Modifikation der $\C$-Struktur $\xi$ auf $X$. (Bis auf Isomorphie)
+  \end{block}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
