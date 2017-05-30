@@ -9,14 +9,14 @@
   Kategorien zu \only<1>{???}\only<2,3>{Funktoren.}
   \pause
   \begin{defn*}
-  Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
-  Dann nennen $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls folgende Bedingungen erfüllt sind:
+  $\C$ und $\De$ Kategorien, $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
+  Wir nennen $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls:
   \begin{enumerate}[F1)]
-    \item $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(A), \F(B)]_\De$.
+    \item $f \in [A, B]_\C \Rightarrow \F(f) \in [\F(A), \F(B)]_\De$.
     \item $\F(f \circ g) = \F(f) \circ \F(g)$, falls $f \circ g$ definiert ist.
-    \item $\F(1_A) = 1_{\F(A)}$ für alle $A \in |\C|$.
+    \item $\forall A \in |\C| \colon \F(1_A) = 1_{\F(A)}$.
   \end{enumerate}
-  Abkürzend: $\F \colon \C \to \De$. (\emph{Homomorphismus von Morphismen})
+  Abkürzend: $\F \colon \C \to \De$. (\emph{Homomorphismus von Kategorien})
 
   \pause
   \vspace{1em}
@@ -43,21 +43,21 @@
         $\F \to \Set$ definiert durch $\F((X, \xi)) = X$ und $\F(f) = f$.
       \item<+-> Dualisierender Funktor: 
         
-        $\F \colon \C \to \C^*$ definiert durch $\F(X) = X$ und $F(f) = f^*$ (contravariant).
-      \item<+-> Dualer Funktor: $\F \colon \C \to \De$ ein Funktor: 
+        $\Delta_\C \colon \C \to \C^*$ definiert durch $\Delta_\C(X) = X$ und $\Delta_\C(f) = f^*$ (contravariant).
+      \item<+-> Dualer Funktor: $\F \colon \C \to \De$ ein covarianter Funktor:
         
-        $\F^* \coloneqq \Delta_{\De} \circ F \circ \Delta_{\C^*}$
+        $\F^* \coloneqq \Delta_{\De} \circ \F \circ \Delta_{\C^*} \colon \C^* \to \De^*$ (covariant)
         
       \item<+-> Identitätsfunktor $\I_\C$: 
         
-        $\F \colon \C \to \C$ definiert durch $\F(X) = X$ und $\F(f) = f$.
+        $\I_\C \colon \C \to \C$ definiert durch $\I_\C(X) = X$ und $\I_\C(f) = f$. (treu)
 
       \item<+-> Inklusionsfunktor: 
         
-        Sei $\C$ eine Kategorie und $\A$ eine \emph{Unterkategorie}, dh 
+        Sei $\C$ eine Kategorie und $\A$ eine \emph{Unterkategorie}, dh.
         \begin{enumerate}[1.]
           \item $|\A| \subset |\C|$,
-          \item $[A, B]_\A \subset [A,B]_\C$ für alle $(A, B) \in |\A| \times |\A|$,
+          \item $(A, B) \in |\A| \times |\A| \colon [A, B]_\A \subset [A,B]_\C$,
           \item Komposition von Mor. in $\A$ wie in $\C$; Identitätsmorphismus derselbe.
         \end{enumerate}
         Gilt sogar $[A, B]_\A = [A, B]_\C$: \emph{volle} Unterkategorie.
@@ -72,7 +72,9 @@
   $\A$ und $\B$ Kategorien, $\F \colon \A \to \B$ Funktor und $B \in |\B|$.
   \vspace{1em}
 
-  Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls $\forall A' \in |\A|$ und $\forall f \colon B \to \F(A')$ 
+  Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \\
+  \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls \\
+  $\forall A' \in |\A|$ und $\forall f \colon B \to \F(A')$ 
   
   genau ein $\A$-Morphismus $\overline f \colon A \to A'$ ex., so dass das Diagramm
   $$
@@ -85,14 +87,14 @@
   \pause
 
   Entsprechend: Paar $(A,u)$ mit $A \in |\A|$ und $u \colon \F(A) \to B$: 
-  \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls $(u^*, A)$ eine universelle Abbildung für $B$ bezüglich des Funktors $\F^* \colon \A^* \to \B^*$ ist:
+  \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls \\
+  $(u^*, A)$ universelle Abbildung für $B$ bezüglich $\F^* \colon \A^* \to \B^*$ ist:
   $$
   \begin{tikzcd}[row sep=2.5em]
     B  &&  \arrow[ll, "f"] \F(A')\arrow[ld, "\F(\overline{f})"]  \\
     & \arrow[lu,"u"]\F(A) & 
   \end{tikzcd}
   $$
-  kommutiert.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -108,13 +110,13 @@
   \vspace{1em}
   \pause
 
-  $\F = \F_e \colon \CompHaus \to \Tych$.
+  $\F = \F_e \colon \CompHaus \to \Tych$. (Tychonoff = T1 + T$3\frac{1}{2}$)
 
-  Für alle $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung:
+  Für alle $X \in |\Tych|$ ist $(e_x, \beta(X))$ eine universelle Abbildung:
 
   $Y \in \CompHaus$ und $f \in [X, \F_e(Y)]_{\Tych}$, liefert Satz von Stone-\v{C}ech gerade:
       $$
-      \begin{tikzcd}[row sep=2.5em]
+      \begin{tikzcd}[row sep=5.5em]
         X \arrow[rd,"e_X"'] \arrow[rr, "f"] &&\F_e(Y) = Y \\
         &\F_e(\beta(X)) = \beta(X) \arrow[ru, "\F_e(\overline{f})"']
       \end{tikzcd}
@@ -125,7 +127,7 @@
 \begin{frame}[fragile]
   \frametitle{Weitere Beispiele}
   \begin{itemize}
-    \item T0-ifizierung
+    \item T-Nullifizierung
     \item Vergissfunktor
   \end{itemize}
 \end{frame}
@@ -135,15 +137,16 @@
   \frametitle{Die \emph{richtigen} Abbildungen zwischen Funktoren}
   Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
   \begin{enumerate}[1)]
-    \item<+-> Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+    \item<+-> Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\A \in |\C| \colon \eta_A \in [\F(A), \G(A)]_\De$ heißt 
+      \\\emph{natürliche Transformation}, falls \\ $\forall f \in [A,B]_\C$ das rechte Diagramm
       $$
       \begin{tikzcd}[row sep=2.5em]
-        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"'] & \G(A)\arrow[d,"\G(f)"] \\
-        \F(B)\arrow[r,"\eta_B"] & \G(B)
+        A\arrow[d,"f"] & & \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"'] & \G(A)\arrow[d,"\G(f)"] \\
+        B & & \F(B)\arrow[r,"\eta_B"] & \G(B)
       \end{tikzcd}
       $$
       kommutiert. Kurz: $\eta \colon \F \to \G$ (Morphismus von Funktoren in $\Cat$).
-    \item<+-> Eine natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls für alle $A \in |\C|$ der Morphismus $\eta_A$ ein Isomorphismus ist.
+    \item<+->Natürliche Transformation $\eta \colon \F \to \G$ heißt \emph{natürliche Äquivalenz}, falls $\forall A \in |\C|$ der Morphismus $\eta_A$ Isomorphismus ist.
     \item<+-> $\F$ und $\G$ heißen \emph{natürlich äquivalent},  wenn eine natürliche Äquivalenz $\eta \colon \F \to \G$ existiert. Kurz: $\F \approx \G$.
   \end{enumerate}
 \end{frame}
@@ -153,18 +156,18 @@
   \frametitle{Universelle Abbildungen und natürliche Transformationen}
   \begin{thm*}
     Sei $\F \colon \A \to \B$ Funktor und \\
-    $\forall B \in |\B|$ ex univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
+    $\forall B \in |\B|$ ex. univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
     Dann ex. genau ein Funktor $\G \colon \B \to \A$ mit
     \pause
     \begin{itemize}
       \item $\forall B \in \B \colon \G(B) = A_B$.
-      \item $u = (u_B)_{B \in |\B|} \colon \I_B \to \G \circ \F$ ist natürliche Transformation.
+      \item $u = (u_B)_{B \in |\B|} \colon \I_\B \to \G \circ \F$ ist natürliche Transformation.
     \end{itemize}
   \end{thm*}
   \pause
 
   \begin{block}{Beweis.}
-  Setze $\forall B \in |\B| \colon \G(B) \coloneqq A_B$.
+  Setze $\forall B \in |\B| \colon \G(B) \coloneqq A_B$. Universelle Abbildung:
     \pause
     $$
     \begin{tikzcd}[row sep=2.5em]
@@ -186,7 +189,7 @@
   \frametitle{Universelle Abbildungen und natürliche Transformationen}
   \begin{thm*}
     Sei $\F \colon \A \to \B$ Funktor und \\
-    $\forall B \in |\B|$ ex univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
+    $\forall B \in |\B|$ ex. univ. Abbildung $(u_B, A_B)$ bezgl. $\F$. \\
     Dann ex. genau ein Funktor $\G \colon \B \to \A$ mit
     \begin{itemize}
       \item $\forall B \in \B \colon \G(B) = A_B$.
@@ -240,7 +243,7 @@
   \end{thm*}
 \pause
   \begin{kor*}
-    Es ex. genau eine nat\"urliche Transformation $v = (v_A) \colon \G \circ \F \to \I_A$ mit
+    Es ex. genau eine nat\"urliche Transformation $v = (v_A) \colon \G \circ \F \to \I_\A$ mit
     \begin{itemize}
       \item $\forall A \in |\A| \colon \F(v_A) \circ u_{\F(A)} = 1_{\F(A)}$,
       \item $\forall B \in |\B| \colon v_{\G(B)} \circ \G(u_B) = 1_{\G(B)}$.
@@ -307,7 +310,8 @@ Mache Satz und Korollar zur Definition und untersuche die dadurch enstehenden Ob
 
   \begin{itemize}
     \item<+-> Adjungierte Funktoren sind bis auf natürliche Äquivalenz eindeutig
-    \item<+-> Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz
+    \item<+-> Die natürlichen Transformationen aus der Definition sind als (co-)universelle Abbildungen eindeutig bis auf natürliche Äquivalenz.
+    \item<+-> Universelle Abbildungen bleiben \emph{universell} unter Verknüpfung mit Isos.
     \item<+-> Adjungierte Situation: Quadrupel $(\G, \F, u, v)$. 
   \end{itemize}
 
@@ -320,9 +324,9 @@ Mache Satz und Korollar zur Definition und untersuche die dadurch enstehenden Ob
 
 \pause
 
-     \underline{Für alle} $X \in \Tych$ ist $(e_x, \beta(X))$ eine universelle Abbildung bezüglich $\F_e$
+     \underline{Für alle} $X \in |\Tych|$ ist $(e_x, \beta(X))$ eine universelle Abbildung bezüglich $\F_e$
      
-     Also: Existiert eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$.
+     Also ex. Linksadjungierte $\beta \colon \Tych \to \CompHaus$.
      \vspace{1em}
 
 \pause
