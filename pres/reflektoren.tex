@@ -12,14 +12,14 @@
   Dann nennen wir $\A$ \emph{reflektiv} in $\C$ genau dann, wenn eine der folgenden äquivalenten Bedingungen erfüllt ist:
   \begin{enumerate}[(1)]
     \item $\F_e$ besitzt einen linksadjungierten Funktor $\R$.
-    \item Für alle $X \in |C|$ ex. eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
+    \item Für alle $X \in |\C|$ ex. eine universelle Abbildung $(r_X, X_\A)$ bezüglich $\F_e$.
   \end{enumerate}
 
   \pause
   \vspace{1em}
   Funktor $\R$ nennen wir \emph{Reflektor}
   
-  Morphismen $r_X \colon X \to X_\A$ nennen wir Reflektionen von $X$ bezüglich $\A$.
+  Morphismen $r_X \colon X \to \F_e(X_\A)$ nennen wir Reflektionen von $X$ bezüglich $\A$.
 
   \pause
   \vspace{1em}
@@ -34,7 +34,7 @@
   \pause
   \begin{itemize}
     \item  $\A$ reflektiv in $\C$
-    \item  $r_X \colon X \to X_\A$ ist ein Epimorphismus/ extremaler Epimorphismus / Bimorphismus ist.
+    \item  $r_X \colon X \to \F_e(X_\A)$ ist ein Epimorphismus/ extremaler Epimorphismus / Bimorphismus ist.
   \end{itemize}
    
   Die Morphismen $r_X$ nennen wir \\\emph{Epireflektionen/ extremale Epireflektionen/ \textbf{Bireflektionen}}.
@@ -64,7 +64,7 @@ Im Falle von topologischen Konstrukten: ganz einfach!
     \item<+-> $(X, \xi_\A) \in |\A|$ (Abgeschlossenheit)
     \item<+-> $\xi_\A$ gröbste aller $\C$-Strukturen $\xi'$, mit $\xi' \leq \xi$ und $(X, \xi') \in |\A|$.
 
-    \item<+->  $c_X \circ c_X^{-1} = 1_X \colon (X,\xi_A) \to (X,\xi)$ ist universelle Abbildung...
+    \item<+->  $c_X \circ c_X^{-1} = 1_X \colon (X,\xi_\A) \to (X,\xi)$ ist universelle Abbildung...
 
     \item<+-> $((X,\xi_\A),1_X)$ Coreflektion von $(X,\xi)$ bez\"uglich $\A$.\qedhere
 
@@ -73,7 +73,7 @@ Im Falle von topologischen Konstrukten: ganz einfach!
   \pause
 
   \begin{block}{Fazit}
-    Man erhält die Coreflektion eines  $\C$-Objekts $(X,\xi)$ bezüglich $\A$ durch eine Modifikation der $\C$-Struktur $\xi$ auf $X$. (Bis auf Isomorphie)
+    Man erhält die Coreflektion eines  $\C$-Objekts $(X,\xi)$ bezüglich $\A$ durch eine Modifikation der $\C$-Struktur $\xi$ auf $X$. (bis auf Isomorphie)
   \end{block}
 
 \end{frame}
@@ -122,7 +122,7 @@ Sei $\A$ bicoreflektiv in $\C$...
 \begin{itemize}
   \item<+-> Existenz und Eindeutigkeit initialer Strukturen:
 
-  Daten: $X$ Menge,$((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+  Daten: $X$ Menge,$\forall i \in I \colon (X_i, \xi_i) \in |\A|, f_i \colon X \to X_i \in \Mor_\Set$. 
 
   $\xi$ die initiale $\C$-Struktur auf $X$. 
 
@@ -130,7 +130,7 @@ Sei $\A$ bicoreflektiv in $\C$...
 $$
 \1_X \colon (X, \xi_\A) \to (X, \xi) 
 $$
-Zeige nun: $\xi_\A$ ist eindeutige Initialstruktur auf $\A$ ist...
+Zeige nun: $\xi_\A$ ist eindeutige Initialstruktur auf $\A$...
 
 \item<+-> Für alle $X$ ist $\{(Y, \eta) \in |\A| \colon Y = X \} \subset\{(Z, \zeta) \in |\C| \colon Z = X \}$ Menge.
 
@@ -139,7 +139,7 @@ Zeige nun: $\xi_\A$ ist eindeutige Initialstruktur auf $\A$ ist...
 
 \item<+-> Bildung finaler Strukturen:
 \begin{itemize}
-\item<+-> $X$ Menge, $((X_i, \xi_i))_{i \in I}$ Familie von $\A$-Objekten. 
+\item<+-> $X$ Menge, $\forall i \in I \colon (X_i, \xi_i)n \in |\A|, f_i \colon X_i \to X \in \Mor_\Set$
 \item<+-> $\xi_\A$ die finale $\A$-Struktur und $\xi_\C$ die finale $\C$-Struktur bzgl. d. Dat.
 \item<+-> $\xi_\A = \xi_\C$... \pause !
 \end{itemize}
