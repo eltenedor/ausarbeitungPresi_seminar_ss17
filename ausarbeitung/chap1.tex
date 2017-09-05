@@ -4,11 +4,11 @@ In diesem Abschnitt füllen wir das Vokabelheft mathematischer Definitionen mit 
 
 \subsection{Funktoren, universelle Morphismen und natürliche Transformationen}
 
-Wie schon in der Einleitung angekündigt, werden Funktoren in diesem Teil des Seminars eine prominente Rolle spielen, denn wir wollen unterschiedliche Kategorien zueinander in Relation setzen und Abbildungen die dies auf \emph{natürliche} Weise schaffen, nennen wir Funktoren.
+Wie schon in der Einleitung angekündigt, werden Funktoren in diesem Teil des Seminars eine prominente Rolle spielen, denn wir wollen unterschiedliche Kategorien zueinander in Relation setzen und Abbildungen, die dies auf \emph{natürliche} Weise schaffen, nennen wir Funktoren.
 
 \begin{defn}[Covarianter Funktor]
-  Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ and $\F_2 \colon \Mor_\C\to \Mor_\De$. 
-  Dann nennen wir das Quadrupel $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls folgende Bedingungen erfüllt sind
+  Seien $\C$ und $\De$ Kategorien und $\F_1 \colon |\C| \to |\De|$ und $\F_2 \colon \Mor_\C\to \Mor_\De$. 
+  Dann nennen wir das Quadrupel $\F = (\C, \De, \F_1, \F_2)$ einen (\emph{covarianten}) \emph{Funktor} von $\C$ nach $\De$, falls folgende Bedingungen erfüllt sind:
   \begin{enumerate}[F1)]
     \item $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(A), \F(B)]_\De$.
     \item $\F(f \circ g) = \F(f) \circ \F(g)$, falls $f \circ g$ definiert ist.
@@ -17,9 +17,9 @@ Wie schon in der Einleitung angekündigt, werden Funktoren in diesem Teil des Se
   Abkürzend schreiben wir im Folgenden auch $\F \colon \C \to \De$.
 \end{defn}
 
-Aufgrung der Eigenschaften F2) und F3) bezeichnet man Funktoren machmal auch als Homomorphismen von Morphismen.
+Aufgrund der Eigenschaften F2) und F3) bezeichnet man Funktoren manchmal auch als Homomorphismen von Morphismen.
 
-Ein \emph{contravarianter Funktor} $\F \colon \C \to \De$ ist gerate ein covarianter Funktor von $\C^* \to \De$, was gerade bedeutet, dass die zusätzlich zu F1) folgende modifizierten Bedingungen gelten:
+Ein \emph{contravarianter Funktor} $\F \colon \C \to \De$ ist gerate ein covarianter Funktor von $\C^* \to \De$, was gerade bedeutet, dass folgende modifizierten Bedingungen gelten:
 \begin{enumerate}[F1')]
   \item $f \in [A, B]_\C$ impliziert $\F(f) \in [\F(B), \F(A)]_\De$.
   \item $\F(f \circ g) = \F(g) \circ \F(f)$, falls $f \circ g$ existiert.
@@ -28,10 +28,9 @@ Ein \emph{contravarianter Funktor} $\F \colon \C \to \De$ ist gerate ein covaria
 Wir beleben den Begriff des Funktors nun, indem wir bekannte Sachverhalte kategorientheoretisch unter die Lupe nehmen.
 
 \begin{ex}
-  \ref{ex:Example}
+  \label{ex:Example}
 \begin{enumerate}[a)]
-    \item Konstanter Funktor: Sind $\C$ und $\De$ Kategorien und $X \in |\De|$.
-      So lässt sich für alle $A \in |\C|$ und alle $f \in \Mor_\C$ durch $\F(A) = X$ und $\F(f) = 1_X$ ein Funktor definieren, welcher sowohl covariant als auch contravariant ist.
+    \item Konstanter Funktor: Sind $\C$ und $\De$ Kategorien und $X \in |\De|$, so lässt sich für alle $A \in |\C|$ und alle $f \in \Mor_\C$ durch $\F(A) = X$ und $\F(f) = 1_X$ ein Funktor definieren, welcher sowohl covariant als auch contravariant ist.
     \item Vergissfunktor: Ist $\C$ ein (topologisches) Konstrukt, so lässt sich ein Funktor $\F \to \Set$ definieren durch $\F((X, \xi)) = X$ und $\F(f) = f$.
     \item Dualisierender Funktor $\Delta_\C$: Es lässt sich ein Funktor $\F \colon \C \to \C^*$ definieren durch $\F(X) = X$ und $F(f) = f^*$. Dieser ist natürlich contravariant.
     \item Dualer Funktor: Ist $\F \colon \C \to \De$ ein Funktor, so erhält man den zugehörigen dualen Funtor als $\Delta_{\De} \circ F \circ \Delta_{\C^*}$
@@ -41,14 +40,16 @@ Wir beleben den Begriff des Funktors nun, indem wir bekannte Sachverhalte katego
         \item $[A, B]_\A \subset [A,B]_\C$ für alle $(A, B) \in |\A| \times |\A|$,
         \item Die Komposition von Morphismen in $\A$ stimmt mit der Komposition in $\C$ überein und die der Identitätsmorphismus ist auch derselbe.
       \end{enumerate}
-      Git zu alledem sogar $[A, B]_\A = [A, B]_\C$, so bezeichnen wir $\A$ als \emph{volle} Unterkategorie.
+      Gilt zu alledem sogar $[A, B]_\A = [A, B]_\C$, so bezeichnen wir $\A$ als \emph{volle} Unterkategorie.
     \item Identitätsfunktor $\I_\C$: Dieser Funktor $\F \colon \C \to \C$ wird durch $\F(X) = X$ und $\F(f) = f$ definiert.
   \end{enumerate}
 \end{ex}
 
+Wir sehen also: Unsere Welt ist voller Funktoren! Um den Kreis der Verdächtigen, die wir später noch genauer unter die Lupe nehmen wollen, etwas einzuschränken, führen wir einen speziellen Typ von Morphismen ein, der es uns im weiteren Verlauf gestatten wird, verdächtige kategorientheoretische Sachverhalte als funktorielle Zusammenhänge zu entlarven.
+
 \begin{defn}[Universelle Abbildung]
   Seien $\A$ und $\B$ Kategorien, $\F \colon \A \to \B$ ein Funktor und $B \in |\B|$.
-  Ein Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls für alle $A' \in |\A|$ und alle $f \colon B \to \F(A')$ genau ein $\A$-Morphismus $\overline f \colon A \to A'$ existiert so dass das Diagramm
+  Ein Paar $(u, A)$ mit $A \in |\A|$ und $u \colon B \to \F(A)$ heißt \emph{universelle Abbildung für $B$ bezüglich $\F$}, falls für alle $A' \in |\A|$ und alle $f \colon B \to \F(A')$ genau ein $\A$-Morphismus $\overline f \colon A \to A'$ existiert, sodass das Diagramm
   $$
   \begin{tikzcd}[row sep=2.5em]
     B \arrow[rd,"u"] \arrow[rr, "f"] &&\F(A') \\
@@ -56,8 +57,8 @@ Wir beleben den Begriff des Funktors nun, indem wir bekannte Sachverhalte katego
   \end{tikzcd}
   $$
   kommutiert.
-  Entsprechend bezeichnet man ein Paar $(A,u)$ mit $A \in |\A|$ und $u \colon \F(A) \to B$ als \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls $(u^*, A)$ eine universelle Abbildung für $B$ bezüglich des Funktors $\F^* \colon \A^* \to \B^*$ ist.
-  Dies bedeutet, dass für alls $A' \in |\A|$ und jeden $\B$-Morphismus $f \colon \F^(A') \to B$ ein eindeutiger $\A$-Morphismus existiert, so dass das Diagramm
+  Entsprechend bezeichnet man ein Paar $(A,u)$ mit $A \in |\A|$ und $u \colon \F(A) \to B$ als \emph{co-universelle Abbildung für $B$ bezüglich $\F$}, falls $(u^*, A)$ eine universelle Abbildung für $B$ bezüglich des dualen Funktors $\F^* \colon \A^* \to \B^*$ ist.
+  Dies bedeutet, dass für alle $A' \in |\A|$ und jeden $\B$-Morphismus $f \colon \F(A') \to B$ ein eindeutiger $\A$-Morphismus $\overline f \colon A' \to A$ existiert, so dass das Diagramm
   $$
   \begin{tikzcd}[row sep=2.5em]
     B  &&  \arrow[ll, "f"] \F(A')\arrow[ld, "\F(\overline{f})"]  \\
@@ -66,6 +67,8 @@ Wir beleben den Begriff des Funktors nun, indem wir bekannte Sachverhalte katego
   $$
   kommutiert.
 \end{defn}
+
+Man beachte, dass der Morphismus $\F(\overline f)$ keineswegs eindeutig festgelegt sein muss. Dies ist im Allgemeinen erst dann der Fall, wenn $\F$ ein \emph{treuer} Funktor ist.
 
 Im folgenden Lemma beschreiben wir das Verhalten (co-)universeller Abbildungen unter Verknüpfung mit Isomorphismen.
 
@@ -80,27 +83,27 @@ Im folgenden Lemma beschreiben wir das Verhalten (co-)universeller Abbildungen u
 \begin{proof}
   Sei $f \colon B \to \F(A')$ ein $\B$-Morphismus. 
   So existiert aufgrund der Eigenschaften von $u$ genau ein $\A$-Morphismus $\overline f \colon A \to A'$ mit $f = \F(\overline f) \circ u$.
-  Aufgrund der Eindeutigkeit von $f$ existiert somit genau ein $g \coloneqq v^{-1} \circ \overline f \colon \underline A \to A'$, sodass das Diagramm   
+  Aufgrund der Eindeutigkeit von $\overline f$ existiert somit auch genau ein $g \coloneqq v^{-1} \circ \overline f \colon \underline A \to A'$, sodass das Diagramm   
   $$
   \begin{tikzcd}[row sep=2.5em]
     B \arrow[rd,"u"] \arrow[rr, "f"] &&\F(A') \\
-    &\F(A) \arrow[ru, "\F(\overline{f})"] \arrow[rd,"\F(v)"] \\
-    &&\F(\underline A) \arrow[uu,"\F(g)"]
+    &\F(A) \arrow[ru, "\F(\overline{f})"'] \arrow[rd,"\F(v)"] \\
+    &&\F(\underline A) \arrow[uu,"\F(g)"']
   \end{tikzcd}
   $$
   mitsamt seiner Unterdiagramme kommutiert.
-  Über ein analoges Argument zeigt man, dass im Falle einer couniversellen Abbildung das Diagramm
+  Über ein analoges Argument zeigt man, dass im Falle einer couniversellen Abbildung $(A,u)$ das Diagramm
   $$
   \begin{tikzcd}[row sep=2.5em]
-    B  & & \F(A') \arrow[ll, "f"]  \\
-    & \F(A)\arrow[ru, "\F(\overline{f})"] \arrow[lu,"u"] \arrow[rd, "\F(v)"]  & \\
-    & & \F(\underline A) \arrow[uu, "\F(g)"]
+    B  & & \F(A') \arrow[ll, "f"]\arrow[ld, "\F(\overline{f})"] \arrow[dd, "\F(g)"] \\
+    & \F(A) \arrow[lu,"u"] \arrow[rd, "\F(v)"]  & \\
+    & & \F(\underline A) 
   \end{tikzcd}
   $$
-  kommutiert.
+  kommutiert. Hierbei ist $g \coloneqq v \circ \overline f$.
 \end{proof}
 
-wir zeigen nun gewissermaßen die Umkehrung des vorangehenden Lemmas, nämlich, dass universelle Abbildungen bereits eindeutig bis auf Isomorphie sind.
+Wir halten nun gewissermaßen die Umkehrung des vorangehenden Lemmas fest, nämlich, dass universelle Abbildungen bereits eindeutig bis auf Isomorphie sind.
 
 \begin{prop}[\cite{preuss}, 2.1.6]
   Seien $(u,A)$ und $(u',A')$ universelle Abbildungen für $B \in |\B|$ bezüglich $\F \colon \A \to \B$.
@@ -114,34 +117,32 @@ wir zeigen nun gewissermaßen die Umkehrung des vorangehenden Lemmas, nämlich, 
   kommutiert.
 \end{prop}
 
-Widmen wir unsere Aufmerksamkeit nun ein paar famosen Beispielen, um die eigeführten Prinzipien bei der Arbeit zu bestaunen.
+Widmen wir unsere Aufmerksamkeit nun einem famosen Beispiel, um die eigeführten Prinzipien bei der Arbeit zu bestaunen.
 
-\begin{ex}
-  \begin{enumerate}
-    \item T0-ifizierung: 
-    \item Stone-Cech Kompaktifizierung: Sei $\Tych$ die Kategorie der Tychonoff-Räume, und $\CompHaus$ die Kategorie der kompakten Hausdorff-Räume.
+\begin{ex}[Stone-\v{C}ech Kompaktifizierung]
+       Sei $\Tych$ die Kategorie der Tychonoff-Räume, und $\CompHaus$ die Kategorie der kompakten Hausdorff-Räume.
       Ferner bezeichnen wir für $X \in |\Tych|$ mittels $\beta(X)$ seine Stone-\v{C}ech-Kompatifizierung und mit $e_X \colon X \to \beta(X)$ die entsprechende Einbettung. Dann ist nach dem Satz von Stone-\v{C}ech \cite[5.4.8]{bartsch} das Paar $(e_X, \beta(X))$ eine universelle Abbildung bezüglich des Inklusionsfunktors $\F_e \colon \CompHaus \to \Tych$.
-      Ein entsprechend angepasstes kommutatives Diagramm liefert Gewissheit. Hierbei sei $Y \in \CompHaus$ und $f \in [X, \F_e(Y)]_{\Tych}$:
+      Ein entsprechend angepasstes kommutatives Diagramm liefert Gewissheit:
       $$
       \begin{tikzcd}[row sep=2.5em]
         X \arrow[rd,"e_X"] \arrow[rr, "f"] &&\F_e(Y) = Y \\
         &\F_e(\beta(X)) = \beta(X) \arrow[ru, "\F_e(\overline{f})"]
       \end{tikzcd}
       $$
-    \item Vergissfunktor
-  \end{enumerate}
+      Hierbei sei $Y \in \CompHaus$ und $f \in [X, \F_e(Y)]_{\Tych}$.
 \end{ex}
 
 Funktoren für sich alleine sind ja schon interessante Kreaturen, aber wie lassen sich Beziehungen unterschiedlicher Funktoren zueinander beschreiben?
+Stellt man sich die Frage, ob man nicht auch Funktoren als Objekte eine Kategorie auffassen kann, so kommt sofort die Frage auf, welches die richtigen Morphismen zwischen Funktoren sind. 
 
 \begin{defn}[Natürliche Transformationen]
   Seien $\C$ und $\De$ Kategorien und $\F, \G \colon \C \to \De$ Funktoren.
   \begin{enumerate}[1)]
-    \item Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das Diagramm
+    \item Eine Familie $\eta = (\eta_A)_{A \in |\C|}$ mit $\eta_A \in [\F(A), \G(A)]_\De$ für alle $\A \in |\C|$ heißt \emph{natürliche Transformation}, falls für alle $(A,B) \in |\C| \times |\C|$ und alle $f \in [A,B]_\C$ das rechte Diagramm
       $$
       \begin{tikzcd}[row sep=2.5em]
-        \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"] & \G(A)\arrow[d,"\G(f)"] \\
-        \F(B)\arrow[r,"\eta_B"] & \G(B)
+        A\arrow[d,"f"] & & \F(A)\arrow[r,"\eta_A"]\arrow[d,"\F(f)"'] & \G(A)\arrow[d,"\G(f)"] \\
+        B & & \F(B)\arrow[r,"\eta_B"] & \G(B)
       \end{tikzcd}
       $$
       kommutiert. Ist $\eta$ eine natürliche Transformation, schreiben wir im Folgenden auch kurz $\eta \colon \F \to \G$.
@@ -150,6 +151,8 @@ Funktoren für sich alleine sind ja schon interessante Kreaturen, aber wie lasse
   \end{enumerate}
 \end{defn}
 
+Weiteres zur Kategorie der Funktoren lässt sich in \cite{brandenburg} nachlesen.
+
 \subsection{Adjungierte Funktoren}
 
 Ein Funktor $\F \colon \C \to \De$ ist natürlich nicht immer ein Isomorphismus, d.h. es existiert nicht unbedingt ein Funktor $\G \colon \De \to \De$ mit
@@ -157,16 +160,18 @@ $$
 \F \circ \G = \I_\De \quad\text{und}\quad \G \circ \F = \I_\C.
 $$
 
-Sind Funkoren nicht invertierbar, können sie zumindest \emph{fast} invertierbar mittels einer Pseudoinversen $\G \colon \De \to \C$ sein.
+Sind Funktoren nicht invertierbar, können sie zumindest \emph{fast} invertierbar mittels einer Pseudoinversen $\G \colon \De \to \C$ sein.
 Dies ist ein Funktor mit 
 $$\F \circ \G \approx \I_\De \quad\text{und}\quad \G \circ \F \approx \I_\C.$$
 
-Auch das ist nicht immer der Fall und folglich ist man bestrebt zu untersuchen, ob ein Funktor nicht zumindest fast \emph{fast} invertierbar ist, im Sinne dass ein weiterer Funktor $\G \colon \De \to \C$ existiert, sodass zumindest natürliche Transformationen
+Auch das ist nicht immer der Fall und folglich ist man bestrebt zu untersuchen, ob ein Funktor nicht zumindest \emph{fast fast} invertierbar ist, im Sinne dass ein weiterer Funktor $\G \colon \De \to \C$ existiert, sodass zumindest natürliche Transformationen
 $$
 \eta \colon \F \circ \G \to \I_\De \quad\text{und}\quad \xi \colon \G \circ \F \to \I_\C
 $$
 zur Stelle sind.
 Um ebendiese Funktoren dreht es sich in diesem Unterabschnitt.
+
+Zunächst wollen wir jedoch die im vorangehenden Kapitel neu eingeführten Begriffe \emph{natürliche Transformation} und \emph{universelle Abbildung} mit einander verheiraten.
 
 \begin{thm}[\cite{preuss}, 2.1.12]
   Sei $\F \colon \A \to B$ ein Funktor mit der Eigenschaft, dass für alle $B \in |\B|$ eine universelle Abbildung $(u_B, A_B)$ bezüglich $F$ existiert.
@@ -177,13 +182,21 @@ Um ebendiese Funktoren dreht es sich in diesem Unterabschnitt.
   \end{enumerate}
 \end{thm}
 
+Moralisch gesehen sollte der Morphismus-Part des entstehenden Funktors gegeben sein durch $\G(f) = \overline f$ und dies wird für die im Späteren betrachteten topologischen Konstrukte sogar nicht nur intuitiv richtig sein. 
+Die saubere Realität sieht anders aus, wie der folgende Beweis zeigen soll.
+
+\begin{proof}
+\end{proof}
+
 \begin{kor}[\cite{preuss}, 2.1.12]
-  Es existiert genau eine natürliche Transformationa $v = (v_A) \colon \G \circ F \to \I_A$, sodass das Folgende gilt:
+  Es existiert genau eine natürliche Transformation $v = (v_A) \colon \G \circ F \to \I_A$, sodass das Folgende gilt:
   \begin{enumerate}[(a)]
     \item $\F(v_A) \circ u_{\F(A)} = \1_{\F(A)}$ für alle $A \in |\A|$.
     \item $v_{\G(B)} \circ \G(u_B) = \1_{\G(B)}$ für alle $B \in |\B|$.
   \end{enumerate}
 \end{kor}
+
+Wir machen nun den vorangehenden Satz und das zugehörige Korollar zur Definition und untersuchen die dadurch entstehenden Objekte.
 
 \begin{defn}[Linksadjungierter Funktor]
   Sind $\F \colon \A \to \B$ und $\G \colon \B \to \A$ Funktoren und $u = (u_B) \colon \I_\B \to \F \circ \G$ sowie $v = (v_A) \colon \G \circ \F \to \I_\A$ natürliche Transformationen mit den Eigenschaften

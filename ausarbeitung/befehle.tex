@@ -129,3 +129,9 @@
 \vcenter{\hbox{$#2#3$ }}\kern-.6\wd0}}
 \def\ddashint{\Xint=}
 \def\dashint{\Xint-}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
