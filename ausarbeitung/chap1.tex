@@ -186,6 +186,39 @@ Moralisch gesehen sollte der Morphismus-Part des entstehenden Funktors gegeben s
 Die saubere Realität sieht anders aus, wie der folgende Beweis zeigen soll.
 
 \begin{proof}
+  Die Aussage des Theorems beinhaltet bereits den Objekt-Teil des Funktors $\G$, den wir auch brav so definieren, d.h. für alle $B \in |B|$ setzen wir $\G(B) = A_B$.
+
+  Betrachten wir nun das Diagramm
+  $$
+    \begin{tikzcd}[row sep=2.5em]
+      \I_\B(B)  = B \arrow[r,"u_B"] \arrow[d,"f"'] & \F(A_B)     = \F(\G(B)) \arrow[d,"\F(\widetilde f)"] 
+      \\ 
+      \I_\B(B') = B'\arrow[r,"u_{B'}"]              & \F(A_{B'})  = \F(\G(B')) 
+    \end{tikzcd}
+    $$
+    Hierbei sei $\widetilde f \coloneqq \overline{u_{B'} \circ f} \in [A_B, A_{B'}]_\A$ eindeutig festgelegt über die Eigenschaft der universellen Abbildung $u_B$.
+    Wir widerstehen der Versuchung nicht und setzen einfach $\G(f) = \widetilde f$. 
+    Tatsächlich haben wir aufgrund der Eindeutigkeitseigenschaft universeller Abbildungen auch gar keine andere Wahl.
+    Hiermit ist schonmal folgendes klar: Ist $\G$ ein Funktor, so gibt es keinen weiteren Funktor, der denselben Job erfüllt. 
+    Da obiges Diagramm kommutiert, erhalten wir, gesetzt dem Falle, dass $\G$ tatsächlich ein Funktor ist, zudem die im Theorem postulierte Eigenschaft (2).
+
+    Seien also $f,g \in  \Mor_\B$, so erhalten wir das folgende Diagramm:
+    $$
+        \begin{tikzcd}[column sep=3.5em,row sep=2.5em]
+          B \arrow[r,"u_B"] \arrow[d,"f"'] \arrow[dd,"g \circ f"',bend right=60]    & \F(A_B)    \arrow[d,"\F(\widetilde f)"] \arrow[dd, bend left=60, "\F(\widetilde g \circ \widetilde f)"] 
+      \\ 
+      B'\arrow[r,"u_{B'}"] \arrow[d,"g"'] & \F(A_{B'}) \arrow[d ,"\F(\widetilde g)"] \\
+      B''\arrow[r,"u_{B''}"]              & \F(A_{B''}) 
+    \end{tikzcd}
+    $$
+    Dieses Diagramm kommutiert, da $\F$ ein Funktor ist.
+    Insbesondere gilt also $\F(\widetilde g) \circ \F(\widetilde f) = \F(\widetilde g \circ \tilde f)$. 
+    Andererseits liefert die Definition von $u_B$ auch die Existenz einer Abbildung $\widetilde{g \circ f} = \overline{u_{B''} \circ g \circ f}$ mit 
+    $$
+    \F(\widetilde{g \circ f}) \circ u_B = g \circ f .
+    $$
+    Die Eindeutigkeitseigenschaft universeller Abbildungen liefert damit sofort $\widetilde{g \circ f} = \widetilde g \circ \widetilde f$ und folglich auch $\G(g \circ f) = \G(g) \circ \G(f)$.
+    Analoge Haarspalterei liefert $\G(1_B) = 1_{A_B}$.  
 \end{proof}
 
 \begin{kor}[\cite{preuss}, 2.1.12]
