@@ -221,6 +221,8 @@ Die saubere Realität sieht anders aus, wie der folgende Beweis zeigen soll.
     Analoge Haarspalterei liefert $\G(1_B) = 1_{A_B}$.  
 \end{proof}
 
+So wie ein Ingenieur gerne auf Knöpfe einer unbekannten Machine drückt, so setzt ein Mathematiker gerne mehr oder minder bekannte Morhpismen in neuartige Funktoren ein. Genauer gesagt, interessieren wir uns dafür, welche neuen Morphismen wir erhalten, wenn wir die universellen Abbildungen $(u_B, A_B)$ in den soeben konstruierten Funktor $\G$ einsetzen.
+
 \begin{kor}[\cite{preuss}, 2.1.12]
   Es existiert genau eine natürliche Transformation $v = (v_A) \colon \G \circ F \to \I_A$, sodass das Folgende gilt:
   \begin{enumerate}[(a)]
@@ -241,20 +243,26 @@ Wir machen nun den vorangehenden Satz und das zugehörige Korollar zur Definitio
   Das Paar $(\G, \F)$ nennen wir ein \emph{Paar adjungierter Funktoren}.
 \end{defn}
 
+Haben wir etwa zu viel versprochen?
+Dem aufmerksame Leser wird sich wohl kaum ein \emph{Hey, wo sind meine universellen Abbildungen?} verkneinfen können.
+Keine Angst.
+Es stellt sich heraus, dass sich universelle Abbildungen gerne in Rudeln aufhalten, um natürliche Tranformationen zu bilden.
+
 \begin{thm}[\cite{preuss}, 2.1.15]
   Ist $\G \colon \B \to \A$ ein zu $\F \colon \A \to \B$ linksadjungierter Funktor und $u = (u_B) \colon \I_\B \to \F \circ \G$ eine zugehörige natürliche Transformation, dann ist für alle $B \in |B|$ das Paar $(u_B, \G(B))$ eine universelle Abbildung bezüglich $\F$.
 \end{thm}
 
 \begin{bem}[Adjungierte Situation]
-    
+  Namen sind bekanntlich Schall und Rauch und in der Kategorientheorie nur dann zu gebrauchen, wenn die mit dem Namen assozierten Gebilde auf eine gutartige Weise eindeutig bestimmt sind.
+  Dies ist bei adjungierten Funktoren samt Gefolgschaft der Fall:
+  \begin{enumerate}[(i)]
+    \item Adjungierte Funktoren sind eindeutig bestimmt bis auf natürliche Äquivalenz
+    \item Die in der Definition von adjungierten Funktoren auftretenden natürlichen Transformationen sind eindeutig bis auf natürliche Äquivalenz
+  \end{enumerate}
+  Es macht somit Sinn einem paar adjungierter Funktoren natürliche Transformationen zuzuordnen. Ein so entstehendes Tupel $(\G, \F, u, v)$ wollen wir \emph{adjungierte Situation} taufen.
 \end{bem}
 
-\begin{ex}
-  \begin{itemize}
-    \item T0-ifizierung
-    \item Stone-\v{C}ech Kompaktifizierung: Der Inklusionsfunktor $\F_e$ aus Beispiel \ref{ex:Example} besitzt also eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$, die jedem Tychonoff-Raum $X$ seine Stone-\v{C}ech-Kompaktifizierung zuordnet. Beim Versuch, Tychonoff-Räume zu kompaktifizieren wurde also implizit ein ganzer Funktor mitkonstruiert.
-    \item Vergissfunktor
-  \end{itemize}
+\begin{ex}[Stone-\v{C}ech Kompaktifizierung]: Der Inklusionsfunktor $\F_e$ aus Beispiel \ref{ex:Example} besitzt also eine Linksadjungierte $\beta \colon \Tych \to \CompHaus$, die jedem Tychonoff-Raum $X$ seine Stone-\v{C}ech-Kompaktifizierung zuordnet. Beim Versuch, Tychonoff-Räume zu kompaktifizieren wurde also implizit ein ganzer Funktor mitkonstruiert.
 \end{ex}
 
 

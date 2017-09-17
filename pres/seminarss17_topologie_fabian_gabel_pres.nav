@@ -9,74 +9,74 @@
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Funktoren allgemein}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{1}{1}{4/6}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {4}{6}}
-\headcommand {\slideentry {1}{1}{2}{7/12}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {7}{12}}
-\headcommand {\slideentry {1}{1}{3}{13/14}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {13}{14}}
-\headcommand {\slideentry {1}{1}{4}{15/16}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {15}{16}}
-\headcommand {\slideentry {1}{1}{5}{17/17}{Funktoren allgemein}{0}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {4}{4}}
+\headcommand {\slideentry {1}{1}{2}{5/5}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {5}{5}}
+\headcommand {\slideentry {1}{1}{3}{6/6}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{1}{4}{7/7}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {1}{1}{5}{8/8}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{1}{6}{9/9}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{1}{7}{10/10}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {1}{1}{8}{11/11}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {1}{1}{9}{12/12}{Funktoren allgemein}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{13}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{12}}
+\headcommand {\slideentry {1}{2}{1}{13/13}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\slideentry {1}{2}{2}{14/14}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {14}{14}}
+\headcommand {\slideentry {1}{2}{3}{15/15}{Adjungierte Funktoren}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{16}{Reflektive und coreflektive Unterkategorien}{0}}
+\headcommand {\beamer@sectionpages {3}{15}}
+\headcommand {\beamer@subsectionpages {13}{15}}
+\headcommand {\slideentry {2}{0}{1}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{17}{Allgemein}}\headcommand {\beamer@subsectionpages {16}{16}}
+\headcommand {\slideentry {2}{1}{1}{17/17}{Allgemein}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {1}{1}{6}{18/20}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {18}{20}}
-\headcommand {\slideentry {1}{1}{7}{21/25}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {21}{25}}
-\headcommand {\slideentry {1}{1}{8}{26/33}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {26}{33}}
-\headcommand {\slideentry {1}{1}{9}{34/36}{Funktoren allgemein}{0}}
-\headcommand {\beamer@framepages {34}{36}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{37}{Adjungierte Funktoren}}\headcommand {\beamer@subsectionpages {4}{36}}
-\headcommand {\slideentry {1}{2}{1}{37/39}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {37}{39}}
-\headcommand {\slideentry {1}{2}{2}{40/42}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {40}{42}}
-\headcommand {\slideentry {1}{2}{3}{43/49}{Adjungierte Funktoren}{0}}
-\headcommand {\beamer@framepages {43}{49}}
-\headcommand {\sectionentry {2}{Reflektive und coreflektive Unterkategorien}{50}{Reflektive und coreflektive Unterkategorien}{0}}
-\headcommand {\beamer@sectionpages {3}{49}}
-\headcommand {\beamer@subsectionpages {37}{49}}
-\headcommand {\slideentry {2}{0}{1}{50/50}{}{0}}
-\headcommand {\beamer@framepages {50}{50}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{51}{Allgemein}}\headcommand {\beamer@subsectionpages {50}{50}}
-\headcommand {\slideentry {2}{1}{1}{51/55}{Allgemein}{0}}
-\headcommand {\beamer@framepages {51}{55}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{56}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {51}{55}}
-\headcommand {\slideentry {2}{2}{1}{56/65}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {56}{65}}
-\headcommand {\slideentry {2}{2}{2}{66/73}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {66}{73}}
-\headcommand {\slideentry {2}{2}{3}{74/85}{In topologischen Konstrukten}{0}}
-\headcommand {\beamer@framepages {74}{85}}
-\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{86}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@sectionpages {50}{85}}
-\headcommand {\beamer@subsectionpages {56}{85}}
-\headcommand {\slideentry {3}{0}{1}{86/86}{}{0}}
-\headcommand {\beamer@framepages {86}{86}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{87}{Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {86}{86}}
-\headcommand {\slideentry {3}{1}{1}{87/93}{Konvergenzstrukturen}{0}}
-\headcommand {\beamer@framepages {87}{93}}
-\headcommand {\slideentry {3}{1}{2}{94/94}{Konvergenzstrukturen}{0}}
-\headcommand {\beamer@framepages {94}{94}}
-\headcommand {\slideentry {3}{1}{3}{95/95}{Konvergenzstrukturen}{0}}
-\headcommand {\beamer@framepages {95}{95}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{96}{Uniforme Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {87}{95}}
-\headcommand {\slideentry {3}{2}{1}{96/102}{Uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@framepages {96}{102}}
-\headcommand {\slideentry {3}{2}{2}{103/104}{Uniforme Konvergenzstrukturen}{0}}
-\headcommand {\beamer@framepages {103}{104}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{105}{Bindeglied zwischen beiden Strukturen}}\headcommand {\beamer@subsectionpages {96}{104}}
-\headcommand {\slideentry {3}{3}{1}{105/105}{Bindeglied zwischen beiden Strukturen}{0}}
-\headcommand {\beamer@framepages {105}{105}}
-\headcommand {\slideentry {3}{3}{2}{106/106}{Bindeglied zwischen beiden Strukturen}{0}}
-\headcommand {\beamer@framepages {106}{106}}
-\headcommand {\slideentry {3}{3}{3}{107/107}{Bindeglied zwischen beiden Strukturen}{0}}
-\headcommand {\beamer@framepages {107}{107}}
-\headcommand {\slideentry {3}{3}{4}{108/108}{Bindeglied zwischen beiden Strukturen}{0}}
-\headcommand {\beamer@framepages {108}{108}}
-\headcommand {\beamer@partpages {1}{108}}
-\headcommand {\beamer@subsectionpages {105}{108}}
-\headcommand {\beamer@sectionpages {86}{108}}
-\headcommand {\beamer@documentpages {108}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{18}{In topologischen Konstrukten}}\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\slideentry {2}{2}{1}{18/18}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {2}{2}{2}{19/19}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {2}{2}{3}{20/20}{In topologischen Konstrukten}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\sectionentry {3}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{21}{Konvergenzstrukturen und uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@sectionpages {16}{20}}
+\headcommand {\beamer@subsectionpages {18}{20}}
+\headcommand {\slideentry {3}{0}{1}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{22}{Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\slideentry {3}{1}{1}{22/22}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {3}{1}{2}{23/23}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{1}{3}{24/24}{Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{25}{Uniforme Konvergenzstrukturen}}\headcommand {\beamer@subsectionpages {22}{24}}
+\headcommand {\slideentry {3}{2}{1}{25/25}{Uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {3}{2}{2}{26/26}{Uniforme Konvergenzstrukturen}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{27}{Bindeglied zwischen beiden Strukturen}}\headcommand {\beamer@subsectionpages {25}{26}}
+\headcommand {\slideentry {3}{3}{1}{27/27}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {3}{3}{2}{28/28}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {3}{3}{3}{29/29}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\slideentry {3}{3}{4}{30/30}{Bindeglied zwischen beiden Strukturen}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@partpages {1}{30}}
+\headcommand {\beamer@subsectionpages {27}{30}}
+\headcommand {\beamer@sectionpages {21}{30}}
+\headcommand {\beamer@documentpages {30}}
 \headcommand {\def \inserttotalframenumber {30}}
